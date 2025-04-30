@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 
 export default function GalleryPage() {
-  const [modalImage, setModalImage] = useState(null);
-
+  const [modalImage, setModalImage] = useState<string | null>(null);
   const galleryItems = [
     {
       title: "Shooting Stars",
