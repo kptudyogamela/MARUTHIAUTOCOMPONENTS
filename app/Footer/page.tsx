@@ -74,11 +74,14 @@ export default function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-200 mt-1 shadow-lg">
-        <div className="container px-5 py-6 flex flex-col sm:flex-row items-center justify-between">
+      <div className="border-t bg-gray-200 border-gray-300 mt-1 shadow-lg">
+        <div className="container px-5 py-3 flex flex-col sm:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm text-center sm:text-left">
             © {new Date().getFullYear()} Maruthi Auto Components — Bangalore, India
           </p>
+          <div className="inline-flex mt-4 sm:mt-0">
+            <p className="text-gray-500 text-sm text-center sm:text-left">Maintained by Swasyaha Solutions</p>
+          </div>
           <div className="inline-flex mt-4 sm:mt-0">
             <a className="text-gray-500 hover:text-red-500" href="#" aria-label="Facebook">
               <FaFacebookF className="w-5 h-5" />

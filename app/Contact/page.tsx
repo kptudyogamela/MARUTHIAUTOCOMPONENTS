@@ -16,11 +16,7 @@ export default function Contact() {
               width="100%"
               height="100%"
               className="absolute inset-0"
-              frameBorder="0"
               title="map"
-              marginHeight="0"
-              marginWidth="0"
-              scrolling="no"
               src="https://maps.google.com/maps?q=Maruthi%20Auto%20Components%2C%20Peenya%2C%20Bangalore&t=&z=15&ie=UTF8&iwloc=&output=embed"
               style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.4)' }}
             ></iframe>
@@ -34,7 +30,7 @@ export default function Contact() {
               </div>
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-                <a href="mailto:maruthiautocomponents@gmail.com" className="text-blue-500 leading-relaxed">
+                <a href="mailto:maruthiautocomponents@gmail.com" className="text-red-500 leading-relaxed">
                   maruthiautocomponents@gmail.com
                 </a>
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
