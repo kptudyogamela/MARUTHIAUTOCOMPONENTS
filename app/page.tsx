@@ -1,10 +1,20 @@
 
-import Herosection from "./Herosection/page";
+import Certification from "./Certification/Page";
+import FeaturedProductsCarousel from "./FeaturedProductsCarousel/page";
+import HeroSection from "./Herosection/page";
+import Stats from "./Stats/page";
+import Testimonials from "./Testimonial/page";
+import TrustedByGrid from "./Trustedby/page";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <Herosection />
+    <div >
+      <HeroSection />
+      <Stats />
+      <TrustedByGrid />
+      <Certification />
+      <FeaturedProductsCarousel />
+      <Testimonials />
     </div>
   );
 }

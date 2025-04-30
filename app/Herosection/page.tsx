@@ -1,98 +1,141 @@
-// pages/index.js
+'use client';
+
 import Image from 'next/image';
-import Head from 'next/head';
+import { PlayCircle, Award } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
-export default function Herosection() {
+export default function HeroSection() {
+  const [showVideo, setShowVideo] = useState(false);
+  const [showCertificate, setShowCertificate] = useState(false);
+
+  const fullText = "Trusted by Industry Leaders";
+  const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(100);
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const current = fullText;
+      const updatedText = isDeleting
+        ? current.substring(0, displayedText.length - 1)
+        : current.substring(0, displayedText.length + 1);
+
+      setDisplayedText(updatedText);
+
+      if (!isDeleting && updatedText === current) {
+        setTimeout(() => setIsDeleting(true), 1500);
+      } else if (isDeleting && updatedText === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const typingTimeout = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(typingTimeout);
+  }, [displayedText, isDeleting, loopNum]);
+
   return (
-    <>
-      <Head>
-        <title>Maruthi Auto Components</title>
-        <meta name="description" content="Precision Auto Turned Components, Laser Cutting, and CNC Bending." />
-      </Head>
+    <section className="relative bg-white text-gray-600 body-font overflow-hidden">
+      <div className="container mx-auto px-6 mt-15 py-4 flex flex-col-reverse md:flex-row items-center">
+        {/* Text Content */}
+        <div className="md:w-1/2 flex flex-col justify-center items-start text-center md:text-left">
+          {/* Headline */}
+          <h1 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-gray-900 leading-snug mb-6">
+            <span className="block text-4xl sm:text-4xl">Precision Engineering</span>
+            <span className="block text-red-400 min-h-[2.5rem]">{displayedText}<span className="animate-pulse">|</span></span>
+          </h1>
 
-      {/* Hero Section */}
-      <section className="bg-gray-900 text-white h-[90vh] flex items-center justify-center relative">
-        <div className="absolute inset-0">
-          <Image src="/factory-hero.jpg" layout="fill" objectFit="cover" alt="Factory Background" />
-          <div className="bg-black bg-opacity-70 h-full w-full absolute inset-0" />
-        </div>
-        <div className="relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Zero Defect is Our Objective</h1>
-          <div className="space-x-4">
-            <a href="/products" className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold">Explore Products</a>
-            <a href="/contact" className="bg-white hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-xl font-semibold">Get a Quote</a>
-          </div>
-        </div>
-      </section>
+          {/* Subheading */}
+          <p className="mb-8 text-lg text-gray-700 max-w-xl">
+            Maruthi Auto Components delivers high-quality tie rods, laser-cut parts, CNC bent components, and assemblies trusted by India’s top OEMs. Backed by ISO certification and over 35 years of expertise.
+          </p>
 
-      {/* About & Stats */}
-      <section className="bg-white py-16 px-8 text-center">
-        <h2 className="text-2xl font-semibold mb-6">Maruthi Auto Components</h2>
-        <p className="max-w-3xl mx-auto text-gray-600">
-          Established in 2013, MAC is a leading manufacturer of precision auto turned components, tubular parts, laser cutting, and CNC bending solutions based in Bangalore.
-        </p>
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <h3 className="text-3xl font-bold text-red-600">2013</h3>
-            <p className="text-gray-500">Established</p>
+          {/* Action Buttons */}
+          <div className="flex flex-wrap gap-4 mb-6 justify-center md:justify-start">
+            <button
+              onClick={() => setShowVideo(true)}
+              className="bg-red-600 inline-flex py-3 px-5 rounded-lg items-center text-white hover:bg-red-700 focus:outline-none transition"
+            >
+              <PlayCircle className="w-6 h-6" />
+              <span className="ml-3 flex flex-col items-start leading-none">
+                <span className="text-xs text-white mb-1">Watch</span>
+                <span className="title-font font-medium text-white">Company Video</span>
+              </span>
+            </button>
+
+            <button
+              onClick={() => setShowCertificate(true)}
+              className="bg-gray-200 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-300 focus:outline-none transition"
+            >
+              <Award className="w-6 h-6 text-red-600" />
+              <span className="ml-3 flex flex-col items-start leading-none">
+                <span className="text-xs text-gray-600 mb-1">To View</span>
+                <span className="title-font font-medium text-gray-800">ISO Certificate</span>
+              </span>
+            </button>
           </div>
-          <div>
-            <h3 className="text-3xl font-bold text-red-600">25+</h3>
-            <p className="text-gray-500">Employees</p>
-          </div>
-          <div>
-            <h3 className="text-3xl font-bold text-red-600">15+</h3>
-            <p className="text-gray-500">Machines</p>
-          </div>
-          <div>
-            <h3 className="text-3xl font-bold text-red-600">35+</h3>
-            <p className="text-gray-500">Years Experience</p>
+
+          <p className="text-sm text-gray-500">
+            ISO Certified | Clients: Indo Autotech, Havells, Surin Automotive & more.
+          </p>
+        </div>
+
+        {/* Hero Image */}
+        <div className="md:w-1/2 mb-10 md:mb-0 flex justify-center">
+          <div className="relative w-full max-w-4xl rounded-lg shadow-lg overflow-hidden">
+            <Image
+              src="/Images/herosec2.png"
+              alt="MAC Factory"
+              width={1200}
+              height={1000}
+              className="object-cover w-full h-full"
+              priority
+            />
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Clients Slider Placeholder */}
-      <section className="bg-gray-100 py-12">
-        <h3 className="text-center text-xl font-semibold mb-6">Trusted By</h3>
-        <div className="flex justify-center gap-10 flex-wrap">
-          <Image src="/clients/havells.png" width={100} height={60} alt="Havells" />
-          <Image src="/clients/surin.png" width={100} height={60} alt="Surin Automotive" />
-          {/* Add more logos */}
-        </div>
-      </section>
-
-      {/* Featured Products Placeholder */}
-      <section className="py-12 px-8 bg-white">
-        <h3 className="text-center text-xl font-semibold mb-6">Featured Products</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="bg-gray-50 p-4 rounded-xl shadow">
-            <Image src="/products/tie-rod.jpg" width={200} height={150} alt="Tie Rod" />
-            <h4 className="mt-2 font-medium">Tie Rod</h4>
+      {/* Video Modal */}
+      {showVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+          <div className="relative w-full max-w-4xl bg-white/10 rounded-xl overflow-hidden shadow-lg">
+            <video controls autoPlay className="w-full h-full rounded-lg">
+              <source src="/Images/videos/5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button
+              onClick={() => setShowVideo(false)}
+              className="absolute top-2 right-2 text-white text-xl bg-black/60 hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
+              aria-label="Close Video"
+            >
+              ✕
+            </button>
           </div>
-          <div className="bg-gray-50 p-4 rounded-xl shadow">
-            <Image src="/products/corner-piece.jpg" width={200} height={150} alt="Corner Piece" />
-            <h4 className="mt-2 font-medium">Corner Piece</h4>
+        </div>
+      )}
+
+      {/* Certificate Modal */}
+      {showCertificate && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+          <div className="relative w-98 max-w-xl bg-white rounded-xl p-6 shadow-lg">
+            <Image
+              src="/Images/certificate1.png"
+              alt="ISO Certificate"
+              width={600}
+              height={800}
+              className="object-contain w-full h-auto rounded-lg"
+            />
+            <button
+              onClick={() => setShowCertificate(false)}
+              className="absolute top-2 right-2 text-black text-xl bg-white hover:bg-red-600 hover:text-white transition rounded-full w-10 h-10 flex items-center justify-center"
+              aria-label="Close Certificate"
+            >
+              ✕
+            </button>
           </div>
-          {/* Add more product cards */}
         </div>
-      </section>
-
-      {/* Quality & Certification */}
-      <section className="bg-gray-100 py-16 text-center">
-        <h3 className="text-xl font-semibold mb-4">Our Commitment to Quality</h3>
-        <p className="text-gray-600 max-w-xl mx-auto">
-          MAC is committed to zero defects, continuous improvement through Kaizen, and robust quality systems like QMS and ISO standards.
-        </p>
-        <div className="mt-6">
-          <Image src="/certificates/iso.png" width={150} height={100} alt="ISO Certification" />
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-10 px-8 text-center">
-        <p>© {new Date().getFullYear()} Maruthi Auto Components | Bangalore</p>
-        <p>Email: maruthiautocomponents@gmail.com | Phone: 9343777577</p>
-      </footer>
-    </>
+      )}
+    </section>
   );
 }
