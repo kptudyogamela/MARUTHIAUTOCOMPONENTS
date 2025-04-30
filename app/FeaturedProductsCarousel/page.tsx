@@ -3,7 +3,6 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
-import { useCallback } from 'react';
 
 const products = [
   { title: 'Tie Rod', image: '/Images/products/p1.jpeg' },

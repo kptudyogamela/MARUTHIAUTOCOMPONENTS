@@ -1,7 +1,6 @@
 'use client'; // Important if you're using Next.js 13+ App Router
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Navbar() {
   return (

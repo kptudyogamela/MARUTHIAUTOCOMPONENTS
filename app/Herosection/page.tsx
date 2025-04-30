@@ -12,7 +12,7 @@ export default function HeroSection() {
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(100);
+  const [typingSpeed] = useState(100);
 
   useEffect(() => {
     const handleTyping = () => {
