@@ -3,13 +3,13 @@ import React from 'react';
 function Stats() {
   const stats = [
     { icon: '📅', value: '2013', label: 'Established' },
-    { icon: '👷', value: '25+', label: 'Employees' },
-    { icon: '⚙️', value: '15+', label: 'Machines' },
+    { icon: '👷', value: '30+', label: 'Employees' },
+    { icon: '⚙️', value: '45+', label: 'Machines' },
     { icon: '🛠', value: '35+ yrs', label: 'Industry Experience' },
     { icon: '📍', value: 'Bangalore', label: 'Location' },
     { icon: '🧪', value: '0 PPM', label: 'Internal Rejection Goal' },
     { icon: '🧾', value: 'ISO Certified', label: 'Quality Standard' },
-    { icon: '🏗', value: '₹125 Lakh', label: '2025 Investment' },
+    { icon: '🏗', value: '₹6 Crore', label: '2025 Investment' },
     { icon: '👨‍🏫', value: '1+/month', label: 'Employee Trainings' },
     { icon: '🏭', value: '8200+ sq ft', label: 'Manufacturing Area' },
     { icon: '🤝', value: '7+', label: 'Major Clients' },

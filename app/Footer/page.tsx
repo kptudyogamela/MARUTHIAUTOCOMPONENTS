@@ -13,7 +13,7 @@ export default function Footer() {
             <Image
               className="object-cover object-center rounded"
               alt="hero"
-              src="/Images/logo.png"
+              src="/Images/Logo.png"
               width={72}
               height={60}
             />
