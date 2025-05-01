@@ -1,10 +1,12 @@
 import React from 'react'
 import ClientsSection from '../OurClients/page'
+import Timeline from '../Timeline/page'
+import Achievements from '../Achievements/page'
 
 function page() {
   return (
     <div>
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-10 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Business Plans</h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500">
@@ -14,6 +16,8 @@ function page() {
             <div className="w-16 h-1 rounded-full bg-red-500 inline-flex"></div>
           </div>
         </div>
+        <Timeline />
+        <Achievements />
         <ClientsSection />
       </div>
     </div>

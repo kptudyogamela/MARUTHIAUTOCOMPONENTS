@@ -1,25 +1,31 @@
 const clients = [
   {
+    icon: '/Images/logo1.jpeg',
     name: 'Indo Autotech Ltd – Bangalore',
     description: 'Trusted partner in delivering precision auto components for high-performance vehicle applications.',
   },
   {
+    icon: '/Images/logo3.png',
     name: 'Badve Engineering Ltd – Bangalore',
     description: 'Supplied machined and tubular parts for mass automotive production lines.',
   },
   {
+    icon: '/Images/logo2.png',
     name: 'Nahars Engineering Ltd – Narasapura',
     description: 'Collaborated on turned parts and rod-based assemblies for industrial use.',
   },
   {
+    icon: '/Images/logo4.png',
     name: 'Surin Automotive – Bangalore',
     description: 'Delivered consistent quality in laser cut and bent components for auto systems.',
   },
   {
+    icon: '/Images/logo5.png',
     name: 'Rittal India Ltd – Doddaballapura',
     description: 'Provided robust structural components used in enclosure and rack systems.',
   },
   {
+    icon: '/Images/logo6.png',
     name: 'Havells India Ltd – Tumkur',
     description: 'Fabricated precision tubular and foundation parts supporting electrical manufacturing.',
   },
@@ -38,17 +44,11 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <div className="p-4 md:w-1/3 flex" key={index}>
               <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l4 8H8l4-8zM2 20h20l-10-6-10 6z" />
-                </svg>
+                <img
+                  alt="Mr. Siddagangappa"
+                  src={client.icon}
+                  className="object-cover object-center w-full h-full"
+                />
               </div>
               <div className="flex-grow pl-6">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-2">{client.name}</h2>
