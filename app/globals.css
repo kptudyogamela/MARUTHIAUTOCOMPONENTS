@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@keyframes pulseColor {
+  0% { color: #dc2626; } /* red-600 */
+  25% { color: #f59e0b; } /* amber-500 */
+  50% { color: #16a34a; } /* green-600 */
+  75% { color: #2563eb; } /* blue-600 */
+  100% { color: #dc2626; } /* back to red */
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
