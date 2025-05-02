@@ -2,6 +2,7 @@ import React from 'react'
 import ClientsSection from '../OurClients/page'
 import Timeline from '../Timeline/page'
 import Achievements from '../Achievements/page'
+import InfrastructureMap from '../InfrastructureMap/page'
 
 function page() {
   return (
@@ -19,6 +20,7 @@ function page() {
         <Timeline />
         <Achievements />
         <ClientsSection />
+        <InfrastructureMap />
       </div>
     </div>
   )

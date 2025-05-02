@@ -1,37 +1,67 @@
-
+'use client'
+import React, { useState } from 'react';
 
 const services = [
   {
-    category: 'PRECISION ENGINEERING',
-    title: 'Turning, Drilling & Chamfering',
+    category: 'AUTO TURNED COMPONENTS',
+    title: 'Precision Machining',
     description:
-      'High-accuracy operations on auto components using TRAUB and specialized machines for turning, drilling, threading, and chamfering.',
-    image: 'https://dummyimage.com/720x400/1e3a8a/ffffff&text=Turning+Operations',
+      'Manufacturing of precision auto-turned components and tubular parts using advanced TRAUB and turning setups.',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
   {
-    category: 'FABRICATION',
+    category: 'FABRICATION & SHEET METAL',
     title: 'Laser Cutting & CNC Bending',
     description:
-      'Advanced laser cutting (3KW) and CNC bending (110T) services for both automotive and non-automotive fabrication needs.',
-    image: 'https://dummyimage.com/721x401/2563eb/ffffff&text=Laser+Cutting',
+      'Laser cutting (3KW) and CNC bending (110T) for automotive and industrial needs, including sheet metal job work.',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
   {
-    category: 'STRUCTURAL PARTS',
-    title: 'Thread Rolling & Foundation Bolts',
+    category: 'ANCHORING & FASTENERS',
+    title: 'Thread Rolling & Bolts',
     description:
-      'Manufacture and supply of custom foundation bolts, tie rods, and slag rods using high-strength thread rolling and reduction machines.',
-    image: 'https://dummyimage.com/722x402/1d4ed8/ffffff&text=Threading+Bolts',
+      'Manufacture of tie rods, anchor bolts, and slag rods with threading, reducing, and chamfering for structural assemblies.',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
+  },
+  {
+    category: 'ELECTRICAL ENCLOSURE COMPONENTS',
+    title: 'Corner Piece Manufacturing',
+    description:
+      'Fabrication of enclosure body parts and custom sheet metal pieces for electrical housing and structural systems.',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
+  },
+  {
+    category: 'IN-HOUSE MACHINING',
+    title: 'Turning, Drilling, Threading, Chamfering',
+    description:
+      'Comprehensive machining support with dedicated tools for turning, drilling, chamfering, and threading under one roof.',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
+  },
+  {
+    category: 'JOB WORK SERVICES',
+    title: 'Laser Cutting & Sheet Bending',
+    description:
+      'Customized laser cutting and bending jobs as per client drawings. Cost-effective solution for one-time and repeat orders.',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
 ];
 
 const ServicesSection = () => {
+  const [videoSrc, setVideoSrc] = useState(null);
+
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-10 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Our Services</h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500">
-            Specializing in high-precision auto components and fabricated parts, MAC delivers zero-defect manufacturing solutions using advanced machinery including laser cutting and CNC bending.
+            MAC offers end-to-end manufacturing solutions ranging from precision turned parts to sheet metal fabrication and structural fasteners.
           </p>
           <div className="flex mt-6 justify-center">
             <div className="w-16 h-1 rounded-full bg-red-500 inline-flex"></div>
@@ -56,7 +86,10 @@ const ServicesSection = () => {
                   </h1>
                   <p className="leading-relaxed mb-3">{service.description}</p>
                   <div className="flex items-center flex-wrap">
-                    <a className="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer">
+                    <button
+                      className="text-red-800 hover:text-red-400 cursor-pointer inline-flex items-center md:mb-2 lg:mb-0"
+                      onClick={() => setVideoSrc(service.video)}
+                    >
                       Learn More
                       <svg
                         className="w-4 h-4 ml-2"
@@ -70,13 +103,31 @@ const ServicesSection = () => {
                         <path d="M5 12h14"></path>
                         <path d="M12 5l7 7-7 7"></path>
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Video Modal */}
+        {videoSrc && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm px-4">
+            <div className="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-lg">
+              <video controls autoPlay className="w-full h-auto">
+                <source src={videoSrc} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <button
+                onClick={() => setVideoSrc(null)}
+                className="absolute top-2 right-2 text-white text-xl bg-black bg-opacity-50 hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
