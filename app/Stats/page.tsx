@@ -9,7 +9,7 @@ function Stats() {
     { icon: '📍', value: 'Bangalore', label: 'Location' },
     { icon: '🧪', value: '0 PPM', label: 'Internal Rejection Goal' },
     { icon: '🧾', value: 'ISO Certified', label: 'Quality Standard' },
-    { icon: '🏗', value: '₹6 Crore', label: '2025 Investment' },
+    { icon: '🏗', value: '₹6 Crore', label: 'Turn Over Annually' },
     { icon: '👨‍🏫', value: '1+/month', label: 'Employee Trainings' },
     { icon: '🏭', value: '8200+ sq ft', label: 'Manufacturing Area' },
     { icon: '🤝', value: '7+', label: 'Major Clients' },

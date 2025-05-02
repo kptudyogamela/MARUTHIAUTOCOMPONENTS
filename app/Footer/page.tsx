@@ -28,7 +28,7 @@ export default function Footer() {
                 height={50}
                 className="rounded"
               />
-              <span className="ml-3 text-lg font-semibold text-gray-900">
+              <span className="ml-3 text-lg font-semibold text-red-400">
                 Maruthi Auto Components
               </span>
             </Link>
@@ -56,7 +56,7 @@ export default function Footer() {
         {/* Column 2: Legal Links */}
         <div className="w-full md:w-1/5 flex justify-center md:justify-start text-center md:text-left">
           <div>
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-red-400 tracking-widest text-sm mb-3">
               LEGAL
             </h2>
             <nav className="list-none space-y-2">
@@ -112,7 +112,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/Files/Certificate1.png"
+                  href="/Files/certificate1.png"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-red-500"
@@ -127,7 +127,7 @@ export default function Footer() {
         {/* Column 3: Products */}
         <div className="w-full md:w-1/5 flex justify-center md:justify-start text-center md:text-left">
           <div>
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-red-400 tracking-widest text-sm mb-3">
               PRODUCTS
             </h2>
             <nav className="list-none space-y-2">
@@ -158,7 +158,7 @@ export default function Footer() {
         {/* Column 4: Newsletter */}
         <div className="w-full md:w-1/3 flex justify-center md:justify-start text-center md:text-left">
           <div>
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-red-400 tracking-widest text-sm mb-3">
               STAY CONNECTED
             </h2>
             <p className="text-gray-600 mb-4">

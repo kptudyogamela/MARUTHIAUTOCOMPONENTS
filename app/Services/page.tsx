@@ -8,7 +8,7 @@ const services = [
     description:
       'Manufacturing of precision auto-turned components and tubular parts using advanced TRAUB and turning setups.',
     video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    image: '/Images/services/1.jpg',
   },
   {
     category: 'FABRICATION & SHEET METAL',
@@ -16,7 +16,7 @@ const services = [
     description:
       'Laser cutting (3KW) and CNC bending (110T) for automotive and industrial needs, including sheet metal job work.',
     video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    image: '/Images/services/2.png',
   },
   {
     category: 'ANCHORING & FASTENERS',
@@ -24,7 +24,7 @@ const services = [
     description:
       'Manufacture of tie rods, anchor bolts, and slag rods with threading, reducing, and chamfering for structural assemblies.',
     video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    image: '/Images/services/3.png',
   },
   {
     category: 'ELECTRICAL ENCLOSURE COMPONENTS',
@@ -32,7 +32,7 @@ const services = [
     description:
       'Fabrication of enclosure body parts and custom sheet metal pieces for electrical housing and structural systems.',
     video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    image: '/Images/services/4.png',
   },
   {
     category: 'IN-HOUSE MACHINING',
@@ -40,7 +40,7 @@ const services = [
     description:
       'Comprehensive machining support with dedicated tools for turning, drilling, chamfering, and threading under one roof.',
     video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    image: '/Images/services/5.png',
   },
   {
     category: 'JOB WORK SERVICES',
@@ -48,7 +48,7 @@ const services = [
     description:
       'Customized laser cutting and bending jobs as per client drawings. Cost-effective solution for one-time and repeat orders.',
     video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    image: '/Images/services/6.png',
   },
 ];
 
