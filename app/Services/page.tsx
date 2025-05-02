@@ -7,48 +7,48 @@ const services = [
     title: 'Precision Machining',
     description:
       'Manufacturing of precision auto-turned components and tubular parts using advanced TRAUB and turning setups.',
-    video: '/videos/turning.mp4',
-    image: '/Images/services/turning.jpg',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
   {
     category: 'FABRICATION & SHEET METAL',
     title: 'Laser Cutting & CNC Bending',
     description:
       'Laser cutting (3KW) and CNC bending (110T) for automotive and industrial needs, including sheet metal job work.',
-    video: '/videos/laser.mp4',
-    image: '/Images/services/laser.jpg',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
   {
     category: 'ANCHORING & FASTENERS',
     title: 'Thread Rolling & Bolts',
     description:
       'Manufacture of tie rods, anchor bolts, and slag rods with threading, reducing, and chamfering for structural assemblies.',
-    video: '/videos/threading.mp4',
-    image: '/Images/services/threading.jpg',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
   {
     category: 'ELECTRICAL ENCLOSURE COMPONENTS',
     title: 'Corner Piece Manufacturing',
     description:
       'Fabrication of enclosure body parts and custom sheet metal pieces for electrical housing and structural systems.',
-    video: '/videos/enclosure.mp4',
-    image: '/Images/services/enclosure.jpg',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
   {
     category: 'IN-HOUSE MACHINING',
     title: 'Turning, Drilling, Threading, Chamfering',
     description:
       'Comprehensive machining support with dedicated tools for turning, drilling, chamfering, and threading under one roof.',
-    video: '/videos/machining.mp4',
-    image: '/Images/services/machining.jpg',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
   {
     category: 'JOB WORK SERVICES',
     title: 'Laser Cutting & Sheet Bending',
     description:
       'Customized laser cutting and bending jobs as per client drawings. Cost-effective solution for one-time and repeat orders.',
-    video: '/videos/jobwork.mp4',
-    image: '/Images/services/jobwork.jpg',
+    video: '/Images/videos/4.mp4',
+    image: '/Images/services/7.jpg',
   },
 ];
 
@@ -87,7 +87,7 @@ const ServicesSection = () => {
                   <p className="leading-relaxed mb-3">{service.description}</p>
                   <div className="flex items-center flex-wrap">
                     <button
-                      className="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0"
+                      className="text-red-800 hover:text-red-400 cursor-pointer inline-flex items-center md:mb-2 lg:mb-0"
                       onClick={() => setVideoSrc(service.video)}
                     >
                       Learn More
