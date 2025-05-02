@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, ShieldCheck, Warehouse, Bot, Layers3, ScanSearch } from 'lucide-react';
+import { Wrench, ShieldCheck, Warehouse, Bot, Layers3 } from 'lucide-react';
 
 function Infrastructure() {
   return (
