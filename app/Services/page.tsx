@@ -1,4 +1,3 @@
-'use client'
 import React, { useState } from 'react';
 
 const services = [
@@ -7,57 +6,57 @@ const services = [
     title: 'Precision Machining',
     description:
       'Manufacturing of precision auto-turned components and tubular parts using advanced TRAUB and turning setups.',
-    video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    video: '/videos/turning.mp4',
+    image: '/Images/services/turning.jpg',
   },
   {
     category: 'FABRICATION & SHEET METAL',
     title: 'Laser Cutting & CNC Bending',
     description:
       'Laser cutting (3KW) and CNC bending (110T) for automotive and industrial needs, including sheet metal job work.',
-    video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    video: '/videos/laser.mp4',
+    image: '/Images/services/laser.jpg',
   },
   {
     category: 'ANCHORING & FASTENERS',
     title: 'Thread Rolling & Bolts',
     description:
       'Manufacture of tie rods, anchor bolts, and slag rods with threading, reducing, and chamfering for structural assemblies.',
-    video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    video: '/videos/threading.mp4',
+    image: '/Images/services/threading.jpg',
   },
   {
     category: 'ELECTRICAL ENCLOSURE COMPONENTS',
     title: 'Corner Piece Manufacturing',
     description:
       'Fabrication of enclosure body parts and custom sheet metal pieces for electrical housing and structural systems.',
-    video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    video: '/videos/enclosure.mp4',
+    image: '/Images/services/enclosure.jpg',
   },
   {
     category: 'IN-HOUSE MACHINING',
     title: 'Turning, Drilling, Threading, Chamfering',
     description:
       'Comprehensive machining support with dedicated tools for turning, drilling, chamfering, and threading under one roof.',
-    video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    video: '/videos/machining.mp4',
+    image: '/Images/services/machining.jpg',
   },
   {
     category: 'JOB WORK SERVICES',
     title: 'Laser Cutting & Sheet Bending',
     description:
       'Customized laser cutting and bending jobs as per client drawings. Cost-effective solution for one-time and repeat orders.',
-    video: '/Images/videos/4.mp4',
-    image: '/Images/services/7.jpg',
+    video: '/videos/jobwork.mp4',
+    image: '/Images/services/jobwork.jpg',
   },
 ];
 
 const ServicesSection = () => {
-  const [videoSrc, setVideoSrc] = useState(null);
+  const [videoSrc, setVideoSrc] = useState<string | null>(null);
 
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-10 mx-auto">
+      <div className="container px-5 py-24 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Our Services</h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500">
@@ -87,7 +86,7 @@ const ServicesSection = () => {
                   <p className="leading-relaxed mb-3">{service.description}</p>
                   <div className="flex items-center flex-wrap">
                     <button
-                      className="text-red-800 hover:text-red-400 cursor-pointer inline-flex items-center md:mb-2 lg:mb-0"
+                      className="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0"
                       onClick={() => setVideoSrc(service.video)}
                     >
                       Learn More
