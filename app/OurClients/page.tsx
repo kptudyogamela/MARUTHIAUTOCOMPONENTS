@@ -2,7 +2,7 @@ const clients = [
   {
     icon: '/Images/logo1.jpeg',
     name: 'Indo Autotech Ltd – Bangalore',
-    description: 'Trusted partner in delivering precision auto components for high-performance vehicle applications.',
+    description: 'Trusted partner in delivering tubuler parts, machining parts, bolts, nuts, collars and bars etc.',
   },
   {
     icon: '/Images/logo3.png',
@@ -17,17 +17,32 @@ const clients = [
   {
     icon: '/Images/logo4.png',
     name: 'Surin Automotive – Bangalore',
-    description: 'Delivered consistent quality in laser cut and bent components for auto systems.',
+    description: 'Delivered consistent quality in Tractor parts like Tubular, Laser Cutting and supplier of Machining Parts.',
   },
   {
     icon: '/Images/logo5.png',
     name: 'Rittal India Ltd – Doddaballapura',
-    description: 'Provided robust structural components used in enclosure and rack systems.',
+    description: 'Trusted supplier of durable corner pieces for high-performance electrical enclosures.',
   },
   {
     icon: '/Images/logo6.png',
+    name: 'MODUTEC READY PANELS PVT LTD',
+    description: 'Supplier of M12 & M16  Tie Rods for Cable Drums ',
+  },
+  {
+    icon: '/Images/logo7.png',
+    name: 'MUNGO FIXINGS INDIA PRIVATE LIMITED',
+    description: 'Supplier of M12 & M16  Tie Rods for Cable Drums ',
+  },
+  {
+    icon: '/Images/logo8.png',
     name: 'Havells India Ltd – Tumkur',
-    description: 'Fabricated precision tubular and foundation parts supporting electrical manufacturing.',
+    description: 'Supplier of M12 & M16  Tie Rods for Cable Drums ',
+  },
+  {
+    icon: '/Images/logo9.png',
+    name: 'Havells India Ltd – Tumkur',
+    description: 'Supplier of M12 & M16  Tie Rods for Cable Drums ',
   },
 ];
 

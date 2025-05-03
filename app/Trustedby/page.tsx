@@ -8,15 +8,21 @@ const customers = [
   { name: 'Indo Autotech', logo: '/Images/logo1.png' },
   { name: 'Havells', logo: '/Images/logo2.png' },
   { name: 'Surin Automotive', logo: '/Images/logo3.png' },
+  { name: 'Nahars Engineering', logo: '/Images/logo8.png' },
   { name: 'Rittal India', logo: '/Images/logo4.png' },
   { name: 'Badve Engineering', logo: '/Images/logo5.png' },
   { name: 'Nahars Engineering', logo: '/Images/logo6.png' },
+  { name: 'Nahars Engineering', logo: '/Images/logo7.png' },
+  { name: 'Nahars Engineering', logo: '/Images/logo9.png' },
   { name: 'Indo Autotech', logo: '/Images/logo1.png' },
   { name: 'Havells', logo: '/Images/logo2.png' },
   { name: 'Surin Automotive', logo: '/Images/logo3.png' },
   { name: 'Rittal India', logo: '/Images/logo4.png' },
   { name: 'Badve Engineering', logo: '/Images/logo5.png' },
   { name: 'Nahars Engineering', logo: '/Images/logo6.png' },
+  { name: 'Nahars Engineering', logo: '/Images/logo7.png' },
+  { name: 'Nahars Engineering', logo: '/Images/logo8.png' },
+  { name: 'Nahars Engineering', logo: '/Images/logo9.png' },
 ];
 
 export default function TrustedByCarousel() {

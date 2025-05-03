@@ -6,12 +6,16 @@ function Stats() {
     { icon: '👷', value: '30+', label: 'Employees' },
     { icon: '⚙️', value: '45+', label: 'Machines' },
     { icon: '🛠', value: '35+ yrs', label: 'Industry Experience' },
-    { icon: '📍', value: 'Bangalore', label: 'Location' },
     { icon: '🧪', value: '0 PPM', label: 'Internal Rejection Goal' },
     { icon: '🧾', value: 'ISO Certified', label: 'Quality Standard' },
-    { icon: '🏗', value: '₹6 Crore', label: 'Turn Over Annually' },
+    { icon: '🏗', value: '₹6 to ₹8 Crore', label: 'Turn Over Annually' },
     { icon: '👨‍🏫', value: '1+/month', label: 'Employee Trainings' },
     { icon: '🏭', value: '8200+ sq ft', label: 'Manufacturing Area' },
+    {
+      icon: '🏭',
+      value: '50000+ sq ft',
+      label: 'Future Expansion @ Japanese Park'
+    },
     { icon: '🤝', value: '7+', label: 'Major Clients' },
     { icon: '🔄', value: '5S + Kaizen', label: 'Workplace Culture' },
   ];

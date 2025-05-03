@@ -28,7 +28,7 @@ function Vision() {
               <div className="flex-grow">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Our Vision</h2>
                 <p className="leading-relaxed text-base">
-                  To be a benchmark in the precision component industry by delivering consistent quality, adopting lean practices, and becoming a preferred partner for global OEMs across automotive, electrical, and mechanical sectors.
+                  To be a benchmark in the precision component industry by delivering consistent quality, embracing lean manufacturing, and becoming the preferred partner for global OEMs—primarily in the automotive sector, while also serving the electrical and mechanical industries.
                 </p>
               </div>
             </div>
@@ -54,7 +54,7 @@ function Vision() {
               <div className="flex-grow">
                 <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Our Mission</h2>
                 <p className="leading-relaxed text-base">
-                  To manufacture high-quality, precision-engineered components using cutting-edge technology and skilled manpower, while upholding customer satisfaction, continuous improvement, and adherence to quality management systems.
+                  To manufacture high-quality, precision-engineered components for the automotive industry, driven by technology and skilled manpower—while upholding customer satisfaction, continuous improvement, and strict adherence to quality management systems.
                 </p>
               </div>
             </div>

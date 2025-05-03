@@ -64,13 +64,13 @@ function Ourstory() {
             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
               <p className="leading-relaxed text-justify text-lg mb-4">
 
-                We specialize in the manufacturing of precision auto-turned components and tubular parts including tie rods, slag rods, and foundation bolts. Our infrastructure includes Laser Cutting (3kW), CNC Bending (110T), and in-house machining like turning, drilling, threading, and chamfering.
+                We specialize in the manufacturing of precision auto-turned components and tubular parts including tie rods, slag rods, and foundation bolts. Our infrastructure includes Laser Cutting (3kW), CNC Bending (110T), Soco Cutting and Soco Chamferings, Special purpose Multi-head Drilling and Tapping Machines, Various Sizes of Traub Machines and Secondary Operation Machines, Thread Rolling Machines and High Accuracy Dia Reducing Machines, 220V Resistant Welding Machines.
                 <br /><br />
                 {/* MAC is ISO certified and driven by lean principles, Kaizen, 5S, and QMS. Our team has a deep understanding of automats, electrical, and mechanical components — offering both <strong>mass production</strong> and <strong>custom job work</strong> capabilities.
                 <br /><br /> */}
-                From humble beginnings to becoming a trusted supplier to brands like Indo Autotech, Havells, Surin Automotive, and Rittal India, our journey reflects commitment, consistency, and quality without compromise.
+                From humble beginnings to becoming a trusted supplier to brands like Indo Autotech, Badve Engineering, Surin Automotive, Rittal India, Swastid India Pvt Ltd, Havells, Mungo Fixings India Pvt Ltd, Modutec READY PANELS PVT LTD, Synergy Punchings our journey reflects commitment, consistency, and quality without compromise.
               </p>
-              <a href="/about" className="text-red-500 inline-flex items-center hover:underline">
+              <a href="#" className="text-red-500 inline-flex items-center hover:underline">
                 Learn More
                 <svg
                   fill="none"

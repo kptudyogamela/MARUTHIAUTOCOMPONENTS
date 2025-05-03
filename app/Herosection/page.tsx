@@ -42,13 +42,13 @@ export default function HeroSection() {
         <div className="md:w-1/2 flex flex-col justify-center items-start text-center md:text-left">
           {/* Headline */}
           <h1 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-gray-900 leading-snug mb-6">
-            <span className="block text-4xl sm:text-4xl">Precision Engineering</span>
+            <span className="block text-4xl sm:text-3xl">Manufacturer of Automotive and Industrial Precision Components</span>
             <span className="block text-red-400 min-h-[2.5rem]">{displayedText}<span className="animate-pulse">|</span></span>
           </h1>
 
           {/* Subheading */}
           <p className="mb-8 text-lg text-gray-700 max-w-xl">
-            Maruthi Auto Components delivers high-quality tie rods, laser-cut parts, CNC bent components, and assemblies trusted by India’s top OEMs. Backed by ISO certification and over 35 years of expertise.
+            Maruthi Auto Components is a leading manufacturer of high-quality precision-turned and tubular automotive parts, including SAG rods, tie rods, anchor bolts, headed and straight-cut bolts. We also specialize in the production of electrical enclosure body corner pieces, as well as laser-cut and CNC-bent components. In addition to manufacturing, we offer job work services for laser cutting and bending. Backed by over 35 years of industry expertise and ISO certification, expert in 5S and Lean Management System, we are committed to delivering excellence in every component we produce.
           </p>
 
           {/* Action Buttons */}

@@ -25,7 +25,7 @@ export default function FeaturedProductsCarousel() {
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4"> Featured Products</h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500">
-            A glimpse into our core offerings — trusted, tested, and tailored to meet the evolving needs of top-tier manufacturers.
+            A glimpse into our core offerings — trusted, tested, and tailored to meet the evolving needs of top-tier 1 & 2 manufacturers.
           </p>
           <div className="flex mt-6 justify-center">
             <div className="w-16 h-1 rounded-full bg-red-500 inline-flex"></div>

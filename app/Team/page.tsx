@@ -18,11 +18,11 @@ export default function Team() {
 
           <div className="p-4 lg:w-1/4 md:w-1/2">
             <div className="h-full flex flex-col items-center text-center">
-              <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="/Images/team/team1.png" />
+              <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="/Images/team/team1.jpg" />
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">Mr. Siddagangappa</h2>
                 <h3 className="text-gray-500 mb-3">CEO</h3>
-                <p className="mb-4">35+ years in automotive industry covering QMS, NPD, and quality. A pioneer in lean manufacturing and systems implementation.</p>
+                <p className="mb-4">An industry veteran with 35+ years of experience in automotive manufacturing, specializing in Production, Quality, QMS, 5S, and New Product Development.</p>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function Team() {
 
           <div className="p-4 lg:w-1/4 md:w-1/2">
             <div className="h-full flex flex-col items-center text-center">
-              <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="/Images/team/team2.png" />
+              <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="/Images/team/team3.jpg" />
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">V. S. Meghana</h2>
                 <h3 className="text-gray-500 mb-3">Engineer – QA & Accounts</h3>
@@ -55,7 +55,7 @@ export default function Team() {
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">Santhipriya</h2>
                 <h3 className="text-gray-500 mb-3">Engineer – Systems</h3>
-                <p className="mb-4">Experienced systems engineer with MNC background, contributing to technical and operational infrastructure.</p>
+                <p className="mb-4">Experienced systems engineer with MNC background, contributing to Purchase, Accounts and Operational System.</p>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ const services = [
   },
   {
     category: 'FABRICATION & SHEET METAL',
-    title: 'Laser Cutting & CNC Bending',
+    title: 'CNC Bending',
     description:
       'Laser cutting (3KW) and CNC bending (110T) for automotive and industrial needs, including sheet metal job work.',
     video: '/Images/videos/4.mp4',
