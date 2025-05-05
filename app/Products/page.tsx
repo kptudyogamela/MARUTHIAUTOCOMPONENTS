@@ -20,7 +20,7 @@ const products = [
       "Used for assembling metal frameworks and angular support junctions in structural and fabrication works.",
     category: "Fabrication",
     type: "Corner Piece",
-    image: "/images/products/1.png"
+    image: "/Images/products/1.png"
   },
   {
     title: "Anchor Bolts",
@@ -28,7 +28,7 @@ const products = [
       "Precision-manufactured bolts used for securing structures to concrete foundations, ensuring strong and reliable anchoring.",
     category: "Construction",
     type: "Anchor Bolts",
-    image: "/images/products/2.jpg"
+    image: "/Images/products/2.jpg"
   },
   {
     title: "Headed Bolts",
@@ -36,7 +36,7 @@ const products = [
       "Heavy-duty bolts with heads for use in structural and industrial assemblies, meeting high-torque applications.",
     category: "Turned Parts",
     type: "Headed Bolts",
-    image: "/images/products/3.jpg"
+    image: "/Images/products/3.jpg"
   },
   {
     title: "Precision Turned Components",
@@ -44,7 +44,7 @@ const products = [
       "Manufactured with high accuracy using TRAUB and SPM machines, ideal for automobile and electrical industry applications.",
     category: "Tubular Parts",
     type: "Turned Parts",
-    image: "/images/products/4.jpg"
+    image: "/Images/products/4.jpg"
   },
   {
     title: "Custom Tubular Section",
@@ -52,7 +52,7 @@ const products = [
       "High-strength tubular components tailored for automotive frames and structural applications.",
     category: "Tubular Parts",
     type: "Tubular Parts",
-    image: "/images/products/5.jpg"
+    image: "/Images/products/5.jpg"
   },
   {
     title: "Assembly Parts",
@@ -60,7 +60,7 @@ const products = [
       "Pre-assembled components tailored to client requirements, reducing on-site labor and increasing efficiency.",
     category: "Automobile",
     type: "Assembly Parts",
-    image: "/images/products/6.jpg"
+    image: "/Images/products/6.jpg"
   },
   {
     title: "Bolt Cushions",
@@ -68,7 +68,7 @@ const products = [
       "Vibration-dampening components used with bolts to protect assemblies from shock and loosening.",
     category: "Turned Parts",
     type: "Bolt Cushions",
-    image: "/images/products/7.jpg"
+    image: "/Images/products/7.jpg"
   },
   {
     title: "Laser Cutting & CNC Bending",
@@ -76,7 +76,7 @@ const products = [
       "With 3KW laser cutting and 110T CNC bending, we provide high-precision fabrication for both automotive and non-automotive sectors.",
     category: "Fabrication",
     type: "Laser Cutting & CNC Bending Parts",
-    image: "/images/products/8.jpg"
+    image: "/Images/products/8.jpg"
   },
   {
     title: "Tie Rods & Slag Rods",
@@ -84,7 +84,7 @@ const products = [
       "Engineered rods for structural and machinery support applications, including customized specifications.",
     category: "Construction",
     type: "Tie Rods",
-    image: "/images/products/9.jpg"
+    image: "/Images/products/9.jpg"
   },
   {
     title: "Laser Job Works",
@@ -92,7 +92,7 @@ const products = [
       "High-quality laser job cutting services for sheet metal and custom parts with precise detailing and clean finish.",
     category: "Services",
     type: "Laser Job Parts",
-    image: "/images/products/con1.jpg"
+    image: "/Images/products/con1.jpg"
   },
   {
     title: "Heavy-Duty Bolt",
@@ -100,7 +100,7 @@ const products = [
       "Rugged construction bolt designed for securing large industrial structures.",
     category: "Construction",
     type: "Construction Bolt",
-    image: "/images/products/con2.jpg"
+    image: "/Images/products/con2.jpg"
   },
   {
     title: "Industrial Bolt with Nut",
@@ -108,7 +108,7 @@ const products = [
       "Industrial-grade bolt with nut assembly, providing robust connection for heavy load applications.",
     category: "Construction",
     type: "Construction Bolt",
-    image: "/images/products/con3.jpg"
+    image: "/Images/products/con3.jpg"
   },
   {
     title: "Threaded Rod Bolt",
@@ -116,7 +116,7 @@ const products = [
       "Fully threaded bolt ideal for structural bonding and support in construction projects.",
     category: "Construction",
     type: "Construction Bolt",
-    image: "/images/products/tub1.jpg"
+    image: "/Images/products/tub1.jpg"
   },
   {
     title: "Tubular Frame Section",
@@ -124,7 +124,7 @@ const products = [
       "Precision tubular steel frame used in chassis and machine frames.",
     category: "Tubular Parts",
     type: "Tubular Frame",
-    image: "/images/products/tub2.jpg"
+    image: "/Images/products/tub2.jpg"
   },
   {
     title: "Custom Tubular Fabrication",
@@ -132,7 +132,7 @@ const products = [
       "Fabricated tubular parts crafted for specific automotive or structural needs.",
     category: "Tubular Parts",
     type: "Tubular Fabrication",
-    image: "/images/products/tub3.jpg"
+    image: "/Images/products/tub3.jpg"
   },
   {
     title: "High-Strength Pipe",
@@ -140,7 +140,7 @@ const products = [
       "Industrial-grade pipe section built for pressure and durability in mechanical systems.",
     category: "Tubular Parts",
     type: "High-Strength Pipe",
-    image: "/images/products/tur1.jpg"
+    image: "/Images/products/tur1.jpg"
   },
   {
     title: "Machined Shaft Component",
@@ -148,7 +148,7 @@ const products = [
       "Turned part produced with micron-level accuracy, ideal for motion and rotary applications.",
     category: "Turned Parts",
     type: "Machined Shaft",
-    image: "/images/products/tur2.jpg"
+    image: "/Images/products/tur2.jpg"
   }
 
 ];
