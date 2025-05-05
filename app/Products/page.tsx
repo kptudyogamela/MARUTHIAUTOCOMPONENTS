@@ -26,7 +26,7 @@ const products = [
     title: "Headed Bolts",
     description:
       "Heavy-duty bolts with heads for use in structural and industrial assemblies, meeting high-torque applications.",
-    category: "Industrial",
+    category: "Turned Parts",
     type: "Headed Bolts",
     image: "/images/products/3.jpg"
   },
@@ -34,7 +34,7 @@ const products = [
     title: "Precision Turned Components",
     description:
       "Manufactured with high accuracy using TRAUB and SPM machines, ideal for automobile and electrical industry applications.",
-    category: "Automobile",
+    category: "Tubular Parts",
     type: "Turned Parts",
     image: "/images/products/4.jpg"
   },
@@ -42,7 +42,7 @@ const products = [
     title: "Custom Tubular Section",
     description:
       "High-strength tubular components tailored for automotive frames and structural applications.",
-    category: "Automobile",
+    category: "Tubular Parts",
     type: "Tubular Parts",
     image: "/images/products/5.jpg"
   },
@@ -50,7 +50,7 @@ const products = [
     title: "Assembly Parts",
     description:
       "Pre-assembled components tailored to client requirements, reducing on-site labor and increasing efficiency.",
-    category: "Assembly",
+    category: "Automobile",
     type: "Assembly Parts",
     image: "/images/products/6.jpg"
   },
@@ -58,7 +58,7 @@ const products = [
     title: "Bolt Cushions",
     description:
       "Vibration-dampening components used with bolts to protect assemblies from shock and loosening.",
-    category: "Industrial",
+    category: "Turned Parts",
     type: "Bolt Cushions",
     image: "/images/products/7.jpg"
   },
