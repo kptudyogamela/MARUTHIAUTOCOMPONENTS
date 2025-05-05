@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { X } from "lucide-react"; // ✅ Import the X icon here
+
 
 interface Product {
   title: string;
@@ -155,7 +157,6 @@ const products = [
 
 
 
-
 const types = ["All", ...new Set(products.map((p) => p.category))];
 
 export default function Products() {
@@ -165,7 +166,7 @@ export default function Products() {
   const filtered = filter === "All" ? products : products.filter((p) => p.category === filter);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white relative">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900">Our Products & Capabilities</h2>
@@ -215,6 +216,31 @@ export default function Products() {
           ))}
         </div>
       </div>
+
+      {/* Modal for Product Image */}
+      {selectedProduct && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center">
+          <div className="relative bg-white rounded-lg overflow-hidden shadow-xl max-w-md w-full p-4">
+            <button
+              onClick={() => setSelectedProduct(null)}
+              className="absolute top-2 right-2 text-gray-700 hover:text-black"
+            >
+              <X size={24} />
+            </button>
+            <div className="relative w-full h-64 mb-4">
+              <Image
+                src={selectedProduct.image}
+                alt={selectedProduct.title}
+                fill
+                style={{ objectFit: "contain" }}
+                className="rounded"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-800">{selectedProduct.title}</h3>
+            <p className="text-sm text-gray-600 mt-2">{selectedProduct.description}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
