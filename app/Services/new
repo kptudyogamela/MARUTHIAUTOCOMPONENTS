@@ -1,0 +1,134 @@
+"use client";
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import Image from 'next/image';
+
+const machines = [
+  {
+    title: 'TRAUB Machines',
+    count: '11 Nos',
+    image: '/Images/machines/thread.jpg',
+    description: 'Precision automatic lathes ideal for high-volume production of complex components.',
+    videoUrl: '/videos/traub.mp4'
+  },
+  {
+    title: 'SPM ID OD Chamfering Machine',
+    count: '1 No',
+    image: '/Images/machines/laser.jpg',
+    description: 'Used for internal and external chamfering of cylindrical components up to 50 mm.',
+    videoUrl: '/videos/chamfering.mp4'
+  },
+  {
+    title: 'SPM Tube Cutting Machines',
+    count: '2 Nos',
+    image: '/Images/machines/laser.jpg',
+    description: 'Automated machines designed to cut tubes precisely up to 50 mm diameter.',
+    videoUrl: '/videos/tube-cutting.mp4'
+  },
+  {
+    title: 'SPM Rod Cutting Machine',
+    count: '1 No',
+    image: '/Images/machines/laser.jpg',
+    description: 'For fast and accurate cutting of rods up to 16 mm diameter.',
+    videoUrl: '/videos/rod-cutting.mp4'
+  },
+  {
+    title: 'Secondary Operation Machines',
+    count: '4 Nos',
+    image: '/Images/machines/laser.jpg',
+    description: 'Used for secondary machining operations such as finishing, shaping, or drilling.',
+    videoUrl: '/videos/secondary.mp4'
+  },
+  {
+    title: 'SPM Drilling Machines',
+    count: '2 Nos',
+    image: '/Images/machines/laser.jpg',
+    description: 'Special Purpose Machines for precision drilling applications.',
+    videoUrl: '/videos/drilling.mp4'
+  },
+  {
+    title: 'SPM Tapping Machine',
+    count: '1 No',
+    image: '/Images/machines/laser.jpg',
+    description: 'Used for accurate internal thread cutting.',
+    videoUrl: '/videos/tapping.mp4'
+  },
+  {
+    title: 'SPM Hole Chamfering Machines',
+    count: '2 Nos',
+    image: '/Images/machines/laser.jpg',
+    description: 'Ideal for deburring and chamfering drilled holes.',
+    videoUrl: '/videos/hole-chamfering.mp4'
+  },
+  {
+    title: 'Laser Cutting 3KW Machine',
+    count: '1 No',
+    image: '/Images/machines/laser.jpg',
+    description: 'High precision fiber laser cutter with 3KW power for complex designs.',
+    videoUrl: '/videos/laser.mp4'
+  },
+  {
+    title: 'CNC Bending Machine',
+    count: '1 No',
+    image: '/Images/machines/laser.jpg',
+    description: 'Computer-controlled machine for high-accuracy metal bending.',
+    videoUrl: '/videos/bending.mp4'
+  },
+  {
+    title: 'Thread Rolling Machines',
+    count: '2 Nos',
+    image: '/Images/machines/thread.jpg',
+    description: 'Machines designed for high-quality thread formation using rolling technique.',
+    videoUrl: '/videos/thread-rolling.mp4'
+  },
+  {
+    title: 'Dia Reducing Machine',
+    count: '1 No',
+    image: '/Images/machines/laser.jpg',
+    description: 'Reduces the diameter of rods or tubes without compromising strength.',
+    videoUrl: '/videos/dia-reducing.mp4'
+  },
+  {
+    title: '200 KVA Resistance Welding Machine',
+    count: '1 No',
+    image: '/Images/machines/laser.jpg',
+    description: 'High-power welding machine used for joining metal parts with resistance heating.',
+    videoUrl: '/videos/welding.mp4'
+  },
+];
+
+const Services = () => {
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-12">Our Machinery</h2>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {machines.map((machine, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            >
+              <Image
+                src={machine.image}
+                alt={machine.title}
+                width={600}
+                height={400}
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">{machine.title}</h3>
+                <p className="text-sm text-gray-500 mb-1">Quantity: {machine.count}</p>
+                <p className="text-gray-700 mb-4">{machine.description}</p>
+                <Button onClick={() => alert(Play video: ${machine.videoUrl})} className="bg-red-600 text-white hover:bg-red-700">
+                  Learn More
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;

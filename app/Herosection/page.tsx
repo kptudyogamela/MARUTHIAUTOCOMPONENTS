@@ -8,7 +8,8 @@ export default function HeroSection() {
   const [showVideo, setShowVideo] = useState(false);
   const [showCertificate, setShowCertificate] = useState(false);
 
-  const fullText = "Trusted by Industry Leaders";
+  // const fullText = "Trusted by Industry Leaders";
+  const fullText = " Industrial Precision Components";
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -42,12 +43,12 @@ export default function HeroSection() {
         <div className="md:w-1/2 flex flex-col justify-center items-start text-center md:text-left">
           {/* Headline */}
           <h1 className="text-4xl sm:text-4xl font-extrabold tracking-tight text-gray-900 leading-snug mb-6">
-            <span className="block text-4xl sm:text-3xl">Manufacturer of Automotive and Industrial Precision Components</span>
+            <span className="block text-4xl sm:text-4xl">Manufacturer of Automotive and </span>
             <span className="block text-red-400 min-h-[2.5rem]">{displayedText}<span className="animate-pulse">|</span></span>
           </h1>
 
           {/* Subheading */}
-          <p className="mb-8 text-lg text-gray-700 max-w-xl">
+          <p className="mb-8 text-lg text-gray-700 text-justify max-w-xl">
             Maruthi Auto Components is a leading manufacturer of high-quality precision-turned and tubular automotive parts, including SAG rods, tie rods, anchor bolts, headed and straight-cut bolts. We also specialize in the production of electrical enclosure body corner pieces, as well as laser-cut and CNC-bent components. In addition to manufacturing, we offer job work services for laser cutting and bending. Backed by over 35 years of industry expertise and ISO certification, expert in 5S and Lean Management System, we are committed to delivering excellence in every component we produce.
           </p>
 
@@ -120,7 +121,7 @@ export default function HeroSection() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
           <div className="relative w-98 max-w-xl bg-white rounded-xl p-6 shadow-lg">
             <Image
-              src="/Images/certificate1.png"
+              src="/Images/certificate/certificate4.png"
               alt="ISO Certificate"
               width={600}
               height={800}

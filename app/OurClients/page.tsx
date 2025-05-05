@@ -1,46 +1,46 @@
 const clients = [
   {
-    icon: '/Images/logo1.jpeg',
+    icon: '/Images/trusted/logo1.jpeg',
     name: 'Indo Autotech Ltd – Bangalore',
     description: 'Trusted partner in delivering tubuler parts, machining parts, bolts, nuts, collars and bars etc.',
   },
   {
-    icon: '/Images/logo3.png',
+    icon: '/Images/trusted/logo3.png',
     name: 'Badve Engineering Ltd – Bangalore',
     description: 'Supplied machined and tubular parts for mass automotive production lines.',
   },
   {
-    icon: '/Images/logo2.png',
+    icon: '/Images/trusted/logo2.png',
     name: 'Nahars Engineering Ltd – Narasapura',
     description: 'Collaborated on turned parts and rod-based assemblies for industrial use.',
   },
   {
-    icon: '/Images/logo4.png',
+    icon: '/Images/trusted/logo4.png',
     name: 'Surin Automotive – Bangalore',
     description: 'Delivered consistent quality in Tractor parts like Tubular, Laser Cutting and supplier of Machining Parts.',
   },
   {
-    icon: '/Images/logo5.png',
+    icon: '/Images/trusted/logo5.png',
     name: 'Rittal India Ltd – Doddaballapura',
     description: 'Trusted supplier of durable corner pieces for high-performance electrical enclosures.',
   },
   {
-    icon: '/Images/logo6.png',
+    icon: '/Images/trusted/logo77.png',
     name: 'MODUTEC READY PANELS PVT LTD',
     description: 'Supplier of M12 & M16  Tie Rods for Cable Drums ',
   },
   {
-    icon: '/Images/logo7.png',
+    icon: '/Images/trusted/logo9.png',
     name: 'MUNGO FIXINGS INDIA PRIVATE LIMITED',
     description: 'Supplier of M12 & M16  Tie Rods for Cable Drums ',
   },
   {
-    icon: '/Images/logo8.png',
-    name: 'Havells India Ltd – Tumkur',
+    icon: '/Images/trusted/logo88.png',
+    name: 'Synergy Punching',
     description: 'Supplier of M12 & M16  Tie Rods for Cable Drums ',
   },
   {
-    icon: '/Images/logo9.png',
+    icon: '/Images/trusted/logo6.png',
     name: 'Havells India Ltd – Tumkur',
     description: 'Supplier of M12 & M16  Tie Rods for Cable Drums ',
   },

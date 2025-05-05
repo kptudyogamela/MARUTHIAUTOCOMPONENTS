@@ -1,8 +1,15 @@
 import React from 'react'
 
 const jobOpenings = [
+
   {
-    title: 'CNC Operator',
+    title: 'Laser Cutting Machine Operator ',
+    department: 'Engineering',
+    location: 'Peenya, Bangalore',
+    type: 'Full Time',
+  },
+  {
+    title: 'CNC Bending Operator',
     department: 'Production',
     location: 'Peenya, Bangalore',
     type: 'Full-Time',

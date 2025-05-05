@@ -42,7 +42,7 @@ function Ourstory() {
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto">
                 <img
                   alt="Mr. Siddagangappa"
-                  src="/Images/team/team1.png" // ✅ Ensure this path is correct
+                  src="/Images/team/team1.jpg" // ✅ Ensure this path is correct
                   className="object-cover object-center w-full h-full"
                 />
               </div>

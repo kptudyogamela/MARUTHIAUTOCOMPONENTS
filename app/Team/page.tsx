@@ -18,7 +18,8 @@ export default function Team() {
 
           <div className="p-4 lg:w-1/4 md:w-1/2">
             <div className="h-full flex flex-col items-center text-center">
-              <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="/Images/team/team1.jpg" />
+              <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                src="/Images/team/team2.jpg" />
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">Mr. Siddagangappa</h2>
                 <h3 className="text-gray-500 mb-3">CEO</h3>

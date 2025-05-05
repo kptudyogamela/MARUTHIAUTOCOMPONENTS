@@ -27,10 +27,10 @@ function Infrastructure() {
             <div className="md:flex-grow">
               <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">Advanced CNC and Laser Cutting</h2>
               <p className="leading-relaxed">
-                Equipped with CNC Bending, CNC Turret Punch, and Laser Cutting machines, our facility ensures high-precision manufacturing with consistent quality for every batch. We support prototyping to high-volume production.
+                With advanced CNC bending and laser cutting machines, our facility ensures high-precision manufacturing and consistent quality across every batch — supporting everything from prototyping to high-volume production. We are continuously upgrading our equipment with new technologies to meet evolving industry demands
               </p>
               <p className="leading-relaxed mt-2">
-                We are continuously upgrading our machine line-up to include fiber lasers, tube bending, and robotic welding — positioning ourselves for future demands.
+                {/* We are continuously upgrading our machine line-up to include fiber lasers, tube bending, and robotic welding — positioning ourselves for future demands. */}
               </p>
               <button className="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">Learn More</button>
             </div>
@@ -74,24 +74,7 @@ function Infrastructure() {
             </div>
           </div>
 
-          {/* Infrastructure Block 4 */}
-          <div className="py-8 flex flex-wrap md:flex-nowrap">
-            <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col items-center text-center">
-              <Bot className="w-10 h-10 text-red-600 mb-2" />
-              <span className="font-semibold title-font text-gray-700">AUTOMATION</span>
-              <span className="text-sm text-gray-500">Upcoming 2025+</span>
-            </div>
-            <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">Smart Manufacturing</h2>
-              <p className="leading-relaxed">
-                MAC plans to integrate Industry 4.0 technologies like robotic welding cells, automated loading/unloading systems, and CNC tube bending.
-              </p>
-              <p className="leading-relaxed mt-2">
-                Our roadmap includes MES software, IoT-based monitoring, and real-time energy dashboards to streamline operations and decision making.
-              </p>
-              <button className="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">Learn More</button>
-            </div>
-          </div>
+
 
           {/* Infrastructure Block 5 */}
           <div className="py-8 flex flex-wrap md:flex-nowrap">
@@ -103,10 +86,10 @@ function Infrastructure() {
             <div className="md:flex-grow">
               <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">Facility & Customer Growth</h2>
               <p className="leading-relaxed">
-                Planned expansion to 5000+ sq.ft dedicated space for global OEM supplies. Goal is to scale up for larger volume and client diversity.
+                We are planning an expansion to a 5,0000+ sq.ft dedicated facility to support global OEM supply growth, aiming to scale operations for higher volumes and a more diverse client be base, while targeting IATF certification, ESG compliance, and long-term partnerships with high-performing enterprise clients.
               </p>
               <p className="leading-relaxed mt-2">
-                Targeting IATF certification, ESG compliance and long-term supply chain partnerships with high-performing enterprise clients.
+
               </p>
               <button className="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">Learn More</button>
             </div>

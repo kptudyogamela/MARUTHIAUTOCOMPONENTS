@@ -5,12 +5,15 @@ import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 
 const products = [
-  { title: 'Tie Rod', image: '/Images/products/p1.jpeg' },
-  { title: 'Anchor Bolt', image: '/Images/products/p2.jpeg' },
-  { title: 'Corner Piece', image: '/Images/products/p3.jpeg' },
-  { title: 'Laser Cut Frame', image: '/Images/products/p4.jpeg' },
-  { title: 'CNC Bent Tube', image: '/Images/products/p2.jpeg' },
-  { title: 'Profiled Rod', image: '/Images/products/p3.jpeg' },
+  { title: 'Corner Piece', image: '/Images/products/1.png' }, { title: 'Tie Rod', image: '/Images/products/1.jpg' },
+  { title: 'Anchor Bolt', image: '/Images/products/2.jpg' },
+  { title: 'Headed Bolts', image: '/Images/products/3.jpg' },
+  { title: 'Turned Part', image: '/Images/products/4.jpg' },
+  { title: 'Tubular Part', image: '/Images/products/5.jpg' },
+  { title: 'Assembly Part', image: '/Images/products/6.jpg' },
+  { title: 'Bolt', image: '/Images/products/7.jpg' },
+  { title: 'CNC Bended Part', image: '/Images/products/8.jpg' },
+
 ];
 
 export default function FeaturedProductsCarousel() {

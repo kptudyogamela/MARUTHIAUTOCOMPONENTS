@@ -6,7 +6,7 @@ function Stats() {
     { icon: '👷', value: '30+', label: 'Employees' },
     { icon: '⚙️', value: '45+', label: 'Machines' },
     { icon: '🛠', value: '35+ yrs', label: 'Industry Experience' },
-    { icon: '🧪', value: '0 PPM', label: 'Internal Rejection Goal' },
+    { icon: '🧪', value: 'Metrics', label: 'Internal - below 100 ppm | Customer end - 0 ppm ' },
     { icon: '🧾', value: 'ISO Certified', label: 'Quality Standard' },
     { icon: '🏗', value: '₹6 to ₹8 Crore', label: 'Turn Over Annually' },
     { icon: '👨‍🏫', value: '1+/month', label: 'Employee Trainings' },
