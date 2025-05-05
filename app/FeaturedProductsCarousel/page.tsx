@@ -7,14 +7,21 @@ import Image from 'next/image';
 const products = [
   { title: 'Corner Piece', image: '/Images/products/1.png' },
   { title: 'Anchor Bolts', image: '/Images/products/2.jpg' },
+  { title: 'Construction images - bolts', image: '/Images/products/con2.jpg' },
   { title: 'Headed Bolts', image: '/Images/products/3.jpg' },
+  { title: 'Tubular parts', image: '/Images/products/tub2.jpg' },
   { title: 'Turned Parts', image: '/Images/products/4.jpg' },
+  { title: 'Construction images - bolts ', image: '/Images/products/con3.jpg' },
   { title: 'Tubular Parts', image: '/Images/products/5.jpg' },
   { title: 'Assembly Parts', image: '/Images/products/6.jpg' },
+  { title: 'Tubular parts', image: '/Images/products/tub3.jpg' },
   { title: 'Bolt Cushions', image: '/Images/products/7.jpg' },
+  { title: 'Turned Parts', image: '/Images/products/tur2.jpg' },
   { title: 'CNC Bending Parts', image: '/Images/products/8.jpg' },
   { title: 'Tie Rods', image: '/Images/products/9.jpg' },
-  { title: 'Laser Job Parts', image: '/Images/products/10.jpg' },
+  { title: 'Construction images - bolts', image: '/Images/products/con1.jpg' }, ,
+  { title: 'Tubular parts', image: '/Images/products/tub1.jpg' },
+  { title: 'Turned Parts', image: '/Images/products/tur1.jpg' },
 ];
 
 export default function FeaturedProductsCarousel() {

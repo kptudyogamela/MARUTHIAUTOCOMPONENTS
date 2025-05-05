@@ -1,9 +1,17 @@
 'use client'
+
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
+interface Product {
+  title: string;
+  description: string;
+  category: string;
+  type: string;
+  image: string;
+}
 
 const products = [
   {
@@ -84,15 +92,75 @@ const products = [
       "High-quality laser job cutting services for sheet metal and custom parts with precise detailing and clean finish.",
     category: "Services",
     type: "Laser Job Parts",
-    image: "/images/products/1.jpg"
+    image: "/images/products/con1.jpg"
   },
+  {
+    title: "Heavy-Duty Bolt",
+    description:
+      "Rugged construction bolt designed for securing large industrial structures.",
+    category: "Construction",
+    type: "Construction Bolt",
+    image: "/images/products/con2.jpg"
+  },
+  {
+    title: "Industrial Bolt with Nut",
+    description:
+      "Industrial-grade bolt with nut assembly, providing robust connection for heavy load applications.",
+    category: "Construction",
+    type: "Construction Bolt",
+    image: "/images/products/con3.jpg"
+  },
+  {
+    title: "Threaded Rod Bolt",
+    description:
+      "Fully threaded bolt ideal for structural bonding and support in construction projects.",
+    category: "Construction",
+    type: "Construction Bolt",
+    image: "/images/products/tub1.jpg"
+  },
+  {
+    title: "Tubular Frame Section",
+    description:
+      "Precision tubular steel frame used in chassis and machine frames.",
+    category: "Tubular Parts",
+    type: "Tubular Frame",
+    image: "/images/products/tub2.jpg"
+  },
+  {
+    title: "Custom Tubular Fabrication",
+    description:
+      "Fabricated tubular parts crafted for specific automotive or structural needs.",
+    category: "Tubular Parts",
+    type: "Tubular Fabrication",
+    image: "/images/products/tub3.jpg"
+  },
+  {
+    title: "High-Strength Pipe",
+    description:
+      "Industrial-grade pipe section built for pressure and durability in mechanical systems.",
+    category: "Tubular Parts",
+    type: "High-Strength Pipe",
+    image: "/images/products/tur1.jpg"
+  },
+  {
+    title: "Machined Shaft Component",
+    description:
+      "Turned part produced with micron-level accuracy, ideal for motion and rotary applications.",
+    category: "Turned Parts",
+    type: "Machined Shaft",
+    image: "/images/products/tur2.jpg"
+  }
+
 ];
+
+
+
 
 const types = ["All", ...new Set(products.map((p) => p.category))];
 
 export default function Products() {
   const [filter, setFilter] = useState("All");
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const filtered = filter === "All" ? products : products.filter((p) => p.category === filter);
 
@@ -120,89 +188,33 @@ export default function Products() {
         </div>
 
         {/* Product Cards */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filtered.map((product, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
-            >
-              <Card className="hover:shadow-xl transition-shadow h-full">
-                <CardContent className="p-6 text-center flex flex-col items-center">
-                  <div className="bg-red-100 text-red-500 w-16 h-16 flex items-center justify-center rounded-full mb-4 overflow-hidden">
-                    {product.image ? (
-                      <Image
-                        src={product.image}
-                        alt={product.title}
-                        width={64}
-                        height={64}
-                        className="object-cover rounded-full"
-                      />
-                    ) : (
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-8 h-8"
-                        viewBox="0 0 24 24"
-                      >
-                        {product.image}
-                      </svg>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.title}</h3>
-                  <p className="text-gray-600 text-sm">{product.description}</p>
-                  <Button
-                    variant="link"
-                    className="mt-3 text-red-500"
-                    onClick={() => setSelectedProduct(product)}
-                  >
-                    Learn More →
-                  </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
+            <Card key={idx} className="hover:shadow-lg transition">
+              <CardContent className="p-4">
+                <div className="relative w-full h-48 mb-4">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="rounded"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800">{product.title}</h3>
+                <p className="text-sm text-gray-500 mt-2">{product.description}</p>
+                <Button
+                  variant="link"
+                  className="mt-3 text-red-500"
+                  onClick={() => setSelectedProduct(product)}
+                >
+                  Learn More →
+                </Button>
+              </CardContent>
+            </Card>
           ))}
         </div>
-
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <motion.div whileHover={{ scale: 1.05 }}>
-            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white">
-              View All Products
-            </Button>
-          </motion.div>
-        </div>
       </div>
-
-      {/* Modal */}
-      {selectedProduct && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl shadow-lg max-w-lg w-full relative overflow-hidden">
-            <button
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-2xl"
-              onClick={() => setSelectedProduct(null)}
-            >
-              ×
-            </button>
-            <div className="p-6 text-center">
-              <h3 className="text-xl font-bold mb-2">{selectedProduct.title}</h3>
-              <p className="text-gray-500 mb-4">{selectedProduct.description}</p>
-              <div className="w-full h-64 relative">
-                <Image
-                  src={selectedProduct.image || `/images/${selectedProduct.type.replace(/\s+/g, "-").toLowerCase()}.jpg`}
-                  alt={selectedProduct.title}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
