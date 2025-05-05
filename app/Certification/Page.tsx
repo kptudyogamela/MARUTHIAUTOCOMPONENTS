@@ -39,7 +39,7 @@ export default function Certification() {
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 2) % certificates.length);
-    }, 1000); // 10 seconds
+    }, 1000000); // 10 seconds
     return () => clearInterval(interval);
   }, []);
 

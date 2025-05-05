@@ -1,44 +1,42 @@
 'use client'
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const products = [
+  {
+    title: "Corner Bracket Piece",
+    description:
+      "Used for assembling metal frameworks and angular support junctions in structural and fabrication works.",
+    category: "Fabrication",
+    type: "Corner Piece",
+    image: "/images/products/1.png"
+  },
+  {
+    title: "Anchor Bolts",
+    description:
+      "Precision-manufactured bolts used for securing structures to concrete foundations, ensuring strong and reliable anchoring.",
+    category: "Construction",
+    type: "Anchor Bolts",
+    image: "/images/products/2.jpg"
+  },
+  {
+    title: "Headed Bolts",
+    description:
+      "Heavy-duty bolts with heads for use in structural and industrial assemblies, meeting high-torque applications.",
+    category: "Industrial",
+    type: "Headed Bolts",
+    image: "/images/products/3.jpg"
+  },
   {
     title: "Precision Turned Components",
     description:
       "Manufactured with high accuracy using TRAUB and SPM machines, ideal for automobile and electrical industry applications.",
     category: "Automobile",
     type: "Turned Parts",
-    icon: <path d="M22 12h-4l-3 9L9 3l-3 9H2" />,
-  },
-  {
-    title: "Laser Cutting & CNC Bending",
-    description:
-      "With 3KW laser cutting and 110T CNC bending, we provide high-precision fabrication for both automotive and non-automotive sectors.",
-    category: "Fabrication",
-    type: "Laser Cutting & CNC Bending Parts",
-    icon: (
-      <>
-        <circle cx="6" cy="6" r="3" />
-        <circle cx="6" cy="18" r="3" />
-        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-      </>
-    ),
-  },
-  {
-    title: "Foundation Bolts & Tubular Parts",
-    description:
-      "Engineered components including tie rods, slag rods, and foundation bolts, tailored to customer requirements with stringent quality control.",
-    category: "Construction",
-    type: "Bolts",
-    icon: (
-      <>
-        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
-      </>
-    ),
+    image: "/images/products/4.jpg"
   },
   {
     title: "Custom Tubular Section",
@@ -46,34 +44,57 @@ const products = [
       "High-strength tubular components tailored for automotive frames and structural applications.",
     category: "Automobile",
     type: "Tubular Parts",
-    icon: (
-      <>
-        <path d="M3 12h18" />
-        <circle cx="12" cy="12" r="3" />
-      </>
-    ),
+    image: "/images/products/5.jpg"
   },
   {
-    title: "Corner Bracket Piece",
+    title: "Assembly Parts",
     description:
-      "Used for assembling metal frameworks and angular support junctions.",
+      "Pre-assembled components tailored to client requirements, reducing on-site labor and increasing efficiency.",
+    category: "Assembly",
+    type: "Assembly Parts",
+    image: "/images/products/6.jpg"
+  },
+  {
+    title: "Bolt Cushions",
+    description:
+      "Vibration-dampening components used with bolts to protect assemblies from shock and loosening.",
+    category: "Industrial",
+    type: "Bolt Cushions",
+    image: "/images/products/7.jpg"
+  },
+  {
+    title: "Laser Cutting & CNC Bending",
+    description:
+      "With 3KW laser cutting and 110T CNC bending, we provide high-precision fabrication for both automotive and non-automotive sectors.",
     category: "Fabrication",
-    type: "Corner Piece",
-    icon: (
-      <>
-        <path d="M4 4h16v16H4z" />
-        <path d="M4 12h8v8" />
-      </>
-    ),
+    type: "Laser Cutting & CNC Bending Parts",
+    image: "/images/products/8.jpg"
+  },
+  {
+    title: "Tie Rods & Slag Rods",
+    description:
+      "Engineered rods for structural and machinery support applications, including customized specifications.",
+    category: "Construction",
+    type: "Tie Rods",
+    image: "/images/products/9.jpg"
+  },
+  {
+    title: "Laser Job Works",
+    description:
+      "High-quality laser job cutting services for sheet metal and custom parts with precise detailing and clean finish.",
+    category: "Services",
+    type: "Laser Job Parts",
+    image: "/images/products/1.jpg"
   },
 ];
 
-const types = ["All", ...new Set(products.map((p) => p.type))];
+const types = ["All", ...new Set(products.map((p) => p.category))];
 
 export default function Products() {
   const [filter, setFilter] = useState("All");
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const filtered = filter === "All" ? products : products.filter((p) => p.type === filter);
+  const filtered = filter === "All" ? products : products.filter((p) => p.category === filter);
 
   return (
     <section className="py-16 bg-white">
@@ -109,22 +130,36 @@ export default function Products() {
             >
               <Card className="hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-6 text-center flex flex-col items-center">
-                  <div className="bg-red-100 text-red-500 w-16 h-16 flex items-center justify-center rounded-full mb-4">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      className="w-8 h-8"
-                      viewBox="0 0 24 24"
-                    >
-                      {product.icon}
-                    </svg>
+                  <div className="bg-red-100 text-red-500 w-16 h-16 flex items-center justify-center rounded-full mb-4 overflow-hidden">
+                    {product.image ? (
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        width={64}
+                        height={64}
+                        className="object-cover rounded-full"
+                      />
+                    ) : (
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        className="w-8 h-8"
+                        viewBox="0 0 24 24"
+                      >
+                        {product.icon}
+                      </svg>
+                    )}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.title}</h3>
                   <p className="text-gray-600 text-sm">{product.description}</p>
-                  <Button variant="link" className="mt-3 text-red-500">
+                  <Button
+                    variant="link"
+                    className="mt-3 text-red-500"
+                    onClick={() => setSelectedProduct(product)}
+                  >
                     Learn More →
                   </Button>
                 </CardContent>
@@ -142,6 +177,32 @@ export default function Products() {
           </motion.div>
         </div>
       </div>
+
+      {/* Modal */}
+      {selectedProduct && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-lg max-w-lg w-full relative overflow-hidden">
+            <button
+              className="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-2xl"
+              onClick={() => setSelectedProduct(null)}
+            >
+              ×
+            </button>
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-bold mb-2">{selectedProduct.title}</h3>
+              <p className="text-gray-500 mb-4">{selectedProduct.description}</p>
+              <div className="w-full h-64 relative">
+                <Image
+                  src={selectedProduct.image || `/images/${selectedProduct.type.replace(/\s+/g, "-").toLowerCase()}.jpg`}
+                  alt={selectedProduct.title}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
