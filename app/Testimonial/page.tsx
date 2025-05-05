@@ -1,11 +1,19 @@
 const testimonialsData = [
   {
+    name: "Vinod Raheja ",
+    role: "Vice President, Nahars Engineering",
+    message:
+      "We’ve been working with MAC for over 13 years now. Their commitment to zero-defect delivery and on-time production is unmatched.",
+    image: "/Images/testimonials/5.jpg",
+  },
+  {
     name: "VENU",
     role: "Assistant Manager, Indo Auto Tech Ltd",
     message:
       "We’ve been working with MAC for over 13 years now. Their commitment to zero-defect delivery and on-time production is unmatched.",
-    image: "/Images/testimonials/1.png",
+    image: "/Images/testimonials/6.png",
   },
+
   {
     name: "ANAND",
     role: "Director, Sourcing and Procurement, Rittal India Ltd",
@@ -31,14 +39,14 @@ const testimonialsData = [
     role: "General Manager, Purchase, Badve Engineering",
     message:
       "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
-    image: "/Images/testimonials/5.jpg",
+    image: "/Images/testimonials/7.jpg",
   },
   {
     name: "V MANOGARAN",
     role: "Manager, Purchase, Swastid Engineing Pvt Ltd",
     message:
       "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
-    image: "/Images/testimonials/6.png",
+    image: "/Images/testimonials/5.jpg",
   },
   {
     name: "Rodrigue Mark",

@@ -149,7 +149,7 @@ export default function Products() {
                         className="w-8 h-8"
                         viewBox="0 0 24 24"
                       >
-                        {product.icon}
+                        {product.image}
                       </svg>
                     )}
                   </div>
