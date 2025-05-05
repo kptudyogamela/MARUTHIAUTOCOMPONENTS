@@ -4,9 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react"; // ✅ Import the X icon here
-
-
+import { X } from "lucide-react";
 interface Product {
   title: string;
   description: string;
@@ -191,28 +189,30 @@ export default function Products() {
         {/* Product Cards */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filtered.map((product, idx) => (
-            <Card key={idx} className="hover:shadow-lg transition">
-              <CardContent className="p-4">
-                <div className="relative w-full h-48 mb-4">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="rounded"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800">{product.title}</h3>
-                <p className="text-sm text-gray-500 mt-2">{product.description}</p>
-                <Button
-                  variant="link"
-                  className="mt-3 text-red-500"
-                  onClick={() => setSelectedProduct(product)}
-                >
-                  Learn More →
-                </Button>
-              </CardContent>
-            </Card>
+            product && (
+              <Card key={idx} className="hover:shadow-lg transition">
+                <CardContent className="p-4">
+                  <div className="relative w-full h-48 mb-4">
+                    <Image
+                      src={product.image || "/placeholder.jpg"}
+                      alt={product.title || "Product Image"}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      className="rounded"
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800">{product.title}</h3>
+                  <p className="text-sm text-gray-500 mt-2">{product.description}</p>
+                  <Button
+                    variant="link"
+                    className="mt-3 text-red-500"
+                    onClick={() => setSelectedProduct(product)}
+                  >
+                    Learn More →
+                  </Button>
+                </CardContent>
+              </Card>
+            )
           ))}
         </div>
       </div>
@@ -222,15 +222,17 @@ export default function Products() {
         <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center">
           <div className="relative bg-white rounded-lg overflow-hidden shadow-xl max-w-md w-full p-4">
             <button
+              type="button"
               onClick={() => setSelectedProduct(null)}
-              className="absolute top-2 right-2 text-gray-700 hover:text-black"
+              className="absolute top-2 right-2 text-gray-700 hover:text-black z-10"
             >
               <X size={24} />
             </button>
+
             <div className="relative w-full h-64 mb-4">
               <Image
-                src={selectedProduct.image}
-                alt={selectedProduct.title}
+                src={selectedProduct.image || "/placeholder.jpg"}
+                alt={selectedProduct.title || "Product Image"}
                 fill
                 style={{ objectFit: "contain" }}
                 className="rounded"
@@ -242,5 +244,6 @@ export default function Products() {
         </div>
       )}
     </section>
+
   );
 }
