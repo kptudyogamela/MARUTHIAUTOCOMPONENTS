@@ -45,25 +45,28 @@ export default function FeaturedProductsCarousel() {
 
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-6">
-            {products.map((product, idx) => (
-              <div
-                key={idx}
-                className="min-w-[250px] max-w-sm bg-gray-50 rounded-xl shadow hover:shadow-lg transition p-4 text-center"
-              >
-                <div className="w-full aspect-[4/3] relative rounded-md overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    className="object-cover"
-                  />
+            {products?.map((product, idx) => (
+              product ? (
+                <div
+                  key={idx}
+                  className="min-w-[250px] max-w-sm bg-gray-50 rounded-xl shadow hover:shadow-lg transition p-4 text-center"
+                >
+                  <div className="w-full aspect-[4/3] relative rounded-md overflow-hidden">
+                    <Image
+                      src={product.image || "/placeholder.jpg"}  // Fallback image in case of missing image
+                      alt={product.title || "Product Image"}   // Fallback alt text
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h3 className="mt-4 font-semibold text-gray-700">{product.title || "Untitled Product"}</h3>
                 </div>
-                <h3 className="mt-4 font-semibold text-gray-700">{product.title}</h3>
-              </div>
+              ) : null
             ))}
           </div>
         </div>
       </div>
     </section>
+
   );
 }
