@@ -1,3 +1,8 @@
+'use client';
+
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+
 const testimonialsData = [
   {
     name: "Vinod Raheja ",
@@ -73,9 +78,18 @@ const testimonialsData = [
 
 
 const Testimonials = () => {
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: 'start',
+      slidesToScroll: 1,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  );
+
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+    <section className="text-gray-600 body-font bg-gray-50">
+      <div className="container px-5 py-4 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
             Testimonials
@@ -90,24 +104,29 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap -m-4">
-          {testimonialsData.map((testimonial, index) => (
-            <div key={index} className="lg:w-1/3 lg:mb-0 mb-6 p-4">
-              <div className="h-full text-center">
-                <img
-                  alt="testimonial"
-                  className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src={testimonial.image}
-                />
-                <p className="leading-relaxed">{testimonial.message}</p>
-                <span className="inline-block h-1 w-10 rounded bg-red-500 mt-6 mb-4"></span>
-                <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
-                  {testimonial.name}
-                </h2>
-                <p className="text-gray-500">{testimonial.role}</p>
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-6">
+            {testimonialsData.map((testimonial, index) => (
+              <div
+                key={index}
+                className="min-w-[90%] md:min-w-[48%] bg-white shadow-md rounded-lg p-6"
+              >
+                <div className="h-full text-center">
+                  <img
+                    alt="testimonial"
+                    className="w-20 h-20 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+                    src={testimonial.image}
+                  />
+                  <p className="leading-relaxed text-sm md:text-base">{testimonial.message}</p>
+                  <span className="inline-block h-1 w-10 rounded bg-red-500 mt-6 mb-4" />
+                  <h2 className="text-gray-900 font-semibold tracking-wide text-sm">
+                    {testimonial.name}
+                  </h2>
+                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

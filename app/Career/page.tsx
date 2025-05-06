@@ -21,6 +21,12 @@ const jobOpenings = [
     type: 'Full-Time',
   },
   {
+    title: 'Thread Rolling Machine Setter Cum Operator ... With Experience',
+    department: 'Engineering',
+    location: 'Peenya, Bangalore',
+    type: 'Full-Time',
+  },
+  {
     title: 'Maintenance Technician',
     department: 'Maintenance',
     location: 'Peenya, Bangalore',
@@ -32,13 +38,6 @@ const jobOpenings = [
     location: 'Peenya, Bangalore',
     type: 'Internship',
   },
-  {
-    title: 'Thread Rolling Machine Setter Cum Operator ... With Experience',
-    department: 'Engineering',
-    location: 'Peenya, Bangalore',
-    type: 'Internship',
-  },
-
 
 ];
 
