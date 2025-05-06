@@ -74,4 +74,24 @@ html, body {
     @apply bg-background text-foreground;
   }
 }
+/* styles.css or globals.css */
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scroll-track {
+  display: inline-flex;
+  animation: scroll-x 40s linear infinite;
+}
 

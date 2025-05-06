@@ -219,9 +219,7 @@ export default function Products() {
 
       {/* Modal for Carousel View */}
       {selectedProduct && (
-        // <div className="fixed inset-0 bg-red-100 bg-opacity-70 z-50 flex items-center justify-center">
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-red-200 via-green-100 to-purple-100 bg-opacity-70 backdrop-blur-md">
-          {/* <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-rose-500 via-purple-500 to-indigo-500 bg-opacity-60 backdrop-blur-lg"> */}
 
           <div className="relative bg-white rounded-lg overflow-hidden shadow-xl max-w-md w-full p-4">
             <button
