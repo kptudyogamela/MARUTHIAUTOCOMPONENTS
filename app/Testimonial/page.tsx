@@ -8,7 +8,7 @@ const testimonialsData = [
     name: "Vinod Raheja ",
     role: "Vice President, Nahars Engineering",
     message:
-      "We’ve been working with MAC for over 13 years now. Their commitment to zero-defect delivery and on-time production is unmatched.",
+      "In *Maruthi Auto Components* all team members always work as a family & produce all products 100%  Defect Free . Ensure In-Time Supply Chain to all their customers . Keep It Up !!!.",
     image: "/Images/testimonials/5.jpg",
   },
   {
@@ -18,6 +18,7 @@ const testimonialsData = [
       "We’ve been working with MAC for over 13 years now. Their commitment to zero-defect delivery and on-time production is unmatched.",
     image: "/Images/testimonials/6.png",
   },
+
 
   {
     name: "ANAND",
@@ -33,8 +34,8 @@ const testimonialsData = [
     image: "/Images/testimonials/3.jpg",
   },
   {
-    name: "NAVEEN SHETTY",
-    role: "Operations Head, Mungo Fixings India Pvt. Ltd",
+    name: "MAHESHA",
+    role: "Deputy General Maneger, Metal Man, Hosur",
     message:
       "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
     image: "/Images/testimonials/4.jpg",
@@ -43,38 +44,39 @@ const testimonialsData = [
     name: "ANAND",
     role: "General Manager, Purchase, Badve Engineering",
     message:
-      "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
+      "Maruthi Auto Components, with over 35 years of experience, is a leader in high-precision machining and auto parts, serving top OEMs. Under the dynamic leadership of MD Mr. Siddagangappa, the company has embraced advanced technologies and quality standards, achieving remarkable growth. Wishing him continued success in all future ventures.",
     image: "/Images/testimonials/7.jpg",
   },
   {
-    name: "V MANOGARAN",
+    name: "V MANOGARAN- Pending",
     role: "Manager, Purchase, Swastid Engineing Pvt Ltd",
     message:
       "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
     image: "/Images/testimonials/5.jpg",
   },
   {
-    name: "Rodrigue Mark",
+    name: "Rodrigue Mark- Pending",
     role: "Deputy Manager, Havells India Pvt Ltd",
     message:
       "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
     image: "/Images/testimonials/7.jpg",
   },
   {
-    name: "Rodrigue Mark",
-    role: "Deputy Manager, Havells India Pvt Ltd",
+    name: "Kumar MD",
+    role: "General Manager, Operations, Balmer Lawrie Van Leer  Ltd",
     message:
-      "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
+      "I sincerely appreciate Maruti Industries' commitment to lean manufacturing. It's clearly driving greater efficiency, improving quality, and reducing waste—positioning the company as a leader in process optimization. Truly commendable!",
     image: "/Images/testimonials/10.jpg",
   },
   {
-    name: "Kumar M D",
-    role: "General Manager, Balmer Lawrie Van Leer Limited.",
+    name: "Vishweshwara Prasad",
+    role: "General Manager, JHY Industries.",
     message:
-      "I wanted to express my sincere appreciation for Maruti Industries' commitment to and execution of a lean manufacturing system. It's evident that this approach is fostering significant improvements in efficiency and likely contributing to enhanced quality and reduced waste. This dedication to lean principles not only benefits the company's operations but also positions Maruti Industries as a leader in optimizing processes within the industry. It's truly commendable!",
+      "I wanted to express my sincere appreciation for Maruti Industries' commitment to and execution of a lean manufacturing system. It's evident that this approach is fostering significant improvements in efficiency and likely contributing to enhanced quality and reduced waste. This dedication to lean principles not only benefits the company's operations but also positions Maruti Industries as a leader in optimizing processes within the industry. It's truly commendable!",
     image: "/Images/testimonials/9.jpg",
   },
 ];
+
 
 
 const Testimonials = () => {
