@@ -1,8 +1,3 @@
-'use client';
-import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-
 const clients = [
   {
     icon: '/Images/trusted/logo1.jpeg',
@@ -51,31 +46,6 @@ const clients = [
   },
 ];
 
-const AnimatedCard = ({ children }: { children: React.ReactNode }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.2 });
-
-  React.useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, y: 0 });
-    } else {
-      controls.start({ opacity: 0, y: 50 });
-    }
-  }, [inView, controls]);
-
-  return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
-      className="p-4 md:w-1/3 flex"
-    >
-      {children}
-    </motion.div>
-  );
-};
-
 const ClientsSection = () => {
   return (
     <section className="text-gray-600 body-font">
@@ -87,12 +57,12 @@ const ClientsSection = () => {
         </h1>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           {clients.map((client, index) => (
-            <AnimatedCard key={index}>
+            <div className="p-4 md:w-1/3 flex" key={index}>
               <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
                 <img
-                  alt={client.name}
+                  alt="Mr. Siddagangappa"
                   src={client.icon}
-                  className="object-cover object-center w-full h-full rounded-full"
+                  className="object-cover object-center w-full h-full"
                 />
               </div>
               <div className="flex-grow pl-6">
@@ -113,7 +83,7 @@ const ClientsSection = () => {
                   </svg>
                 </a>
               </div>
-            </AnimatedCard>
+            </div>
           ))}
         </div>
       </div>
