@@ -221,7 +221,7 @@ export default function Products() {
       {selectedProduct && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-red-200 via-green-100 to-purple-100 bg-opacity-70 backdrop-blur-md">
 
-          <div className="relative bg-white rounded-lg overflow-hidden shadow-xl max-w-md w-full p-4">
+          <div className="relative bg-white rounded-lg overflow-hidden shadow-xl max-w-5xl w-full p-6">
             <button
               type="button"
               onClick={() => setSelectedProduct(null)}
@@ -231,18 +231,18 @@ export default function Products() {
             </button>
 
             {/* Carousel Controls */}
-            <div className="relative w-full h-64 mb-4 flex items-center justify-center">
+            <div className="relative w-full h-[60vh] sm:h-[80vh] max-h-[600px] mb-6 flex items-center justify-center px-4">
               {selectedProduct.allImages && selectedProduct.allImages.length > 1 && (
                 <>
                   <button
                     onClick={handlePrev}
-                    className="absolute left-2 z-10 text-gray-700 hover:text-black"
+                    className="absolute left-4 z-10 text-gray-700 hover:text-black bg-white/80 rounded-full p-1"
                   >
                     <ChevronLeft size={28} />
                   </button>
                   <button
                     onClick={handleNext}
-                    className="absolute right-2 z-10 text-gray-700 hover:text-black"
+                    className="absolute right-4 z-10 text-gray-700 hover:text-black bg-white/80 rounded-full p-1"
                   >
                     <ChevronRight size={28} />
                   </button>
@@ -257,8 +257,9 @@ export default function Products() {
               />
             </div>
 
-            <h3 className="text-xl font-semibold text-gray-800">{selectedProduct.title}</h3>
-            <p className="text-sm text-gray-600 mt-2">{selectedProduct.description}</p>
+
+            <h3 className="text-xl text-center font-semibold text-gray-800">{selectedProduct.title}</h3>
+            <p className="text-sm text-center text-gray-600 mt-2">{selectedProduct.description}</p>
           </div>
         </div>
       )
