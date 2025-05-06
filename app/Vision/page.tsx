@@ -1,4 +1,35 @@
+'use client'
+
 import React from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+
+function AnimatedCard({ children, delay = 0 }) {
+  const controls = useAnimation()
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  })
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 })
+    } else {
+      controls.start({ opacity: 0, y: 50 })
+    }
+  }, [inView, controls])
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, ease: 'easeOut', delay }}
+      className="p-4 lg:w-1/2 md:w-full"
+    >
+      {children}
+    </motion.div>
+  )
+}
 
 function Vision() {
   return (
@@ -7,7 +38,7 @@ function Vision() {
         <div className="flex flex-wrap -m-4">
 
           {/* Vision Card */}
-          <div className="p-4 lg:w-1/2 md:w-full">
+          <AnimatedCard>
             <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
               <div className="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 flex-shrink-0">
                 <svg
@@ -32,10 +63,10 @@ function Vision() {
                 </p>
               </div>
             </div>
-          </div>
+          </AnimatedCard>
 
           {/* Mission Card */}
-          <div className="p-4 lg:w-1/2 md:w-full">
+          <AnimatedCard delay={0.2}>
             <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
               <div className="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 flex-shrink-0">
                 <svg
@@ -58,12 +89,11 @@ function Vision() {
                 </p>
               </div>
             </div>
-          </div>
+          </AnimatedCard>
 
         </div>
       </div>
     </section>
-
   )
 }
 

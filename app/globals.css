@@ -95,3 +95,42 @@ html, body {
   animation: scroll-x 40s linear infinite;
 }
 
+/* Add this to your global CSS or the custom styles file */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-left {
+  animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+.slide-right {
+  animation: slideInFromRight 0.6s ease-out forwards;
+}
+
+.slide-bottom {
+  animation: slideInFromBottom 0.6s ease-out forwards;
+}
