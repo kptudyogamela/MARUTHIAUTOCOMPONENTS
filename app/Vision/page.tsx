@@ -1,10 +1,13 @@
-'use client'
-
 import React from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-function AnimatedCard({ children, delay = 0 }) {
+interface AnimatedCardProps {
+  children: React.ReactNode; // Explicitly define the type for children
+  delay?: number;
+}
+
+function AnimatedCard({ children, delay = 0 }: AnimatedCardProps) {
   const controls = useAnimation()
   const [ref, inView] = useInView({
     threshold: 0.2,
