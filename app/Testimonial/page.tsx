@@ -55,6 +55,20 @@ const testimonialsData = [
       "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
     image: "/Images/testimonials/7.jpg",
   },
+  {
+    name: "Rodrigue Mark",
+    role: "Deputy Manager, Havells India Pvt Ltd",
+    message:
+      "From foundation bolts to custom assemblies, MAC has always delivered high-precision components that meet specifications.",
+    image: "/Images/testimonials/10.jpg",
+  },
+  {
+    name: "Kumar M D",
+    role: "General Manager, Balmer Lawrie Van Leer Limited.",
+    message:
+      "I wanted to express my sincere appreciation for Maruti Industries' commitment to and execution of a lean manufacturing system. It's evident that this approach is fostering significant improvements in efficiency and likely contributing to enhanced quality and reduced waste. This dedication to lean principles not only benefits the company's operations but also positions Maruti Industries as a leader in optimizing processes within the industry. It's truly commendable!",
+    image: "/Images/testimonials/9.jpg",
+  },
 ];
 
 

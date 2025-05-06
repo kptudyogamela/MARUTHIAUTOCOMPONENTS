@@ -313,7 +313,6 @@ export default function HeroSection() {
             width={600}
             height={500}
             className="object-cover rounded-lg shadow-md"
-            priority
           />
         </div>
       </div>
