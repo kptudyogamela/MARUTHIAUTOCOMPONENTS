@@ -46,7 +46,7 @@ function Infrastructure() {
             <div className="md:flex-grow">
               <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">In-house Testing & Inspection</h2>
               <p className="leading-relaxed">
-                From digital vernier and height gauges to in-process inspection stations, our quality control system ensures compliance with strict tolerances. Our processes are certified and documented for traceability and reliability.
+                From digital vernier and height gauges to in-process inspection stations, our quality control system ensures compliance with strict tolerances, implemented gauge checking in each stage. Our processes are certified and documented for traceability and reliability.
               </p>
               <p className="leading-relaxed mt-2">
                 With implementation of 5S, Kaizen, and internal audits, we’ve built a culture of quality excellence within every department.
