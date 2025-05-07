@@ -175,6 +175,7 @@ export default function GalleryPage() {
       image: "Images/gal/28.JPG",
     },
 
+
     {
       title: "Shielded Process",
       subtitle: "Protective Welding",
@@ -224,6 +225,12 @@ export default function GalleryPage() {
       image: "Images/gal/38.jpg",
     },
     {
+      title: "Nuts and Threads",
+      subtitle: "Threading Station",
+      description: "Precision thread cutting for secure nut and bolt fitting.",
+      image: "Images/gal/39.jpg",
+    },
+    {
       title: "Clean and Coated",
       subtitle: "Surface Treatment",
       description: "Protective coatings applied to fight rust and abrasion.",
@@ -242,6 +249,7 @@ export default function GalleryPage() {
       image: "Images/gal/42.png",
     },
   ];
+
 
 
   return (

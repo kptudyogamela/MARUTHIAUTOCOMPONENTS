@@ -4,29 +4,23 @@ import Head from 'next/head';
 export default function Contact() {
   return (
     <>
-      <Head>
-        <title>Contact Us | Maruthi Auto Components</title>
-      </Head>
+      <div className="text-center mb-2 pt-10">
+        <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4"> Contact Us</h1>
+        <p className="text-base leading-relaxed xl:w-3/4 lg:w-3/4 mx-auto text-gray-500">
+          Have questions or need assistance? Our team is here to help with product inquiries, service details, or any support you require. Reach out to us — we’re just a message away.
+        </p>
 
+        <div className="flex mt-6 justify-center">
+          <div className="w-16 h-1 rounded-full bg-red-500 inline-flex"></div>
+        </div>
+      </div>
       <section className="text-gray-600 body-font relative">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 py-4 mx-auto">
           <div className="flex flex-col lg:flex-row gap-8">
 
             {/* Left Side: Map + Contact Info */}
             <div className="w-full lg:w-2/3 flex flex-col gap-6 slide-left">
-              {/* Map */}
-              <div className="w-full h-96 relative rounded-lg overflow-hidden shadow-md">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  className="absolute inset-0"
-                  title="map"
-                  src="https://maps.google.com/maps?q=Maruthi%20Auto%20Components%2C%20Peenya%2C%20Bangalore&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.6)' }}
-                ></iframe>
-              </div>
 
-              {/* Contact Info */}
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex flex-col md:flex-row md:justify-between gap-6">
                   <div className="md:w-1/2">
@@ -46,6 +40,20 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+              {/* Map */}
+              <div className="w-full h-96 relative rounded-lg overflow-hidden shadow-md">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  className="absolute inset-0"
+                  title="map"
+                  src="https://maps.google.com/maps?q=Maruthi%20Auto%20Components%2C%20Peenya%2C%20Bangalore&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.6)' }}
+                ></iframe>
+              </div>
+
+              {/* Contact Info */}
+
             </div>
 
             {/* Right Side: Contact Form */}

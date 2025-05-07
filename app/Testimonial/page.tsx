@@ -78,7 +78,6 @@ const testimonialsData = [
 ];
 
 
-
 const Testimonials = () => {
   const [emblaRef] = useEmblaCarousel(
     {

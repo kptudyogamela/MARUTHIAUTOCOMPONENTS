@@ -14,110 +14,109 @@ interface Product {
   image: string;
   allImages?: string[]; // new field for image group
 }
-
 const groupedProducts = [
   {
     title: "Corner Bracket Piece",
-    description: "Used for assembling metal frameworks and angular support junctions in structural and fabrication works.",
+    description: "Used for assembling metal frameworks, in electrical enclosure bodies it provides angular support in structural and fabrication works.",
     category: "Fabrication",
     type: "Corner Piece",
-    images: Array.from({ length: 8 }, (_, i) => `/Images/products/newprod/${12 + i}.jpg`)
+    images: [79, 12, 13, 14, 15, 16, 17, 18, 19, 78].map(i => `/Images/products/newprod/${i}.jpg`)
+  },
+  {
+    title: "Corner Bracket Piece",
+    description: "Used for assembling metal frameworks, electrical enclosure body and angular support junctions in structural and fabrication works.",
+    category: "Corner Bracket",
+    type: "Corner Piece",
+    images: [78, 12, 13, 14, 15, 16, 17, 18, 19, 79].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Washers",
     description: "Flat washers used in mechanical assemblies to distribute load and reduce wear.",
-    category: "Fasteners",
+    category: "Services",
     type: "Washer",
     images: [1, 2].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Tie Rods",
-    description: "Structural rods used in construction to support tension and integrity.",
-    category: "Construction",
+    description: "Structural rods used in Cable drums to support tension.",
+    category: "Automobile Parts",
     type: "Tie Rods",
     images: [3, 4, 5, 6, 7].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Construction Bolts",
-    description: "Bolts used in heavy construction projects to hold components together securely.",
-    category: "Construction",
+    description: "Bolts used in heavy construction projects to hold components together securely and helps in strength of the buildings.",
+    category: "Bolts",
     type: "Construction Bolts",
     images: [8, 9, 10, 11].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
-    title: "Nuts",
-    description: "Metal nuts used with bolts to fasten structural components.",
-    category: "Fasteners",
-    type: "Nuts",
-    images: [20, 21].map(i => `/Images/products/newprod/${i}.jpg`)
-  },
-  {
     title: "Plain Bolts",
-    description: "Standard bolts used for general-purpose fastening in assemblies.",
-    category: "Fasteners",
+    description: "Standard bolts used for fastening in assemblies, Automobile industries and in construction buildings.",
+    category: "Bolts",
     type: "Plain Bolt",
     images: [22, 23, 24].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Pipes",
-    description: "Metal pipes used in plumbing, construction and structural applications.",
-    category: "Fabrication",
+    description: "In two wheeler parts, automotive industry.",
+    category: "Automobile Parts",
     type: "Pipes",
     images: [25, 26, 27].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Cross Members",
     description: "Structural cross members used in frameworks to provide strength and support.",
-    category: "Fabrication",
+    category: "Tubular Parts",
     type: "Cross Member",
     images: [28, 29, 30, 31].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Assembly Parts",
     description: "Components used in mechanical and industrial assemblies.",
-    category: "Fabrication",
+    category: "Turned Parts",
     type: "Assembly Parts",
     images: [32, 33].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Hexagon Headed Bolt",
     description: "Bolts with hexagonal heads for better grip and torque application.",
-    category: "Fasteners",
+    category: "Bolts",
     type: "Hexagon Headed Bolt",
     images: [34, 35, 36].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Tubular Pipes",
     description: "Cylindrical pipes used in mechanical frameworks and systems.",
-    category: "Fabrication",
+    category: "Tubular Parts",
     type: "Tubular Pipes",
     images: [37, 38].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Hook Stand SPG",
     description: "Stand components used in scaffoldings or machinery fixtures.",
-    category: "Fabrication",
+    category: "Turned Parts",
     type: "Hook Stand SPG",
     images: [39, 40].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Collars",
     description: "Mechanical collars used to position or locate components on shafts.",
-    category: "Fasteners",
+    category: "Tubular Parts",
     type: "Collar",
     images: [41, 42, 43].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Tubular Parts - Tractor",
     description: "Tubular mechanical parts used in tractors and agricultural machinery.",
-    category: "Automotive",
+    category: "Automobile Parts",
     type: "Tubular Part - Tractor",
     images: [44, 45].map(i => `/Images/products/newprod/${i}.jpg`)
   },
   {
     title: "Tubular Parts - Automotive",
     description: "Tubular mechanical parts used in automotive applications.",
-    category: "Automotive",
+    category: "Automobile Parts",
     type: "Tubular Part - Automotive",
     images: [46, 47, 48].map(i => `/Images/products/newprod/${i}.jpg`)
   },
@@ -129,6 +128,7 @@ const groupedProducts = [
     images: Array.from({ length: 28 }, (_, i) => `/Images/products/newprod/${49 + i}.jpg`)
   }
 ];
+
 
 
 const types = ["All", ...new Set(groupedProducts.map((p) => p.category))];
@@ -189,12 +189,12 @@ export default function Products() {
             return (
               <Card key={idx} className="hover:shadow-lg transition">
                 <CardContent className="p-4">
-                  <div className="relative w-full h-48 mb-4">
+                  <div className="relative w-full  h-48 mb-4">
                     <Image
                       src={mainImage}
                       alt={product.title}
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "contain" }}
                       className="rounded"
                     />
                   </div>
